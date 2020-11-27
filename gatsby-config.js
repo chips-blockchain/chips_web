@@ -11,5 +11,16 @@ module.exports = {
     siteUrl: `https://chips.cash`,
     description: `CHIPS poker`,
   },
-  plugins: [],
+  plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `src/images`,
+      },
+    },
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    'gatsby-plugin-styled-components'
+  ],
 }

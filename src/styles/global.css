@@ -1,0 +1,10 @@
+html, body {
+    font-family: var(--font--family-primary);
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 600;
+}

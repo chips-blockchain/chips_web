@@ -1,0 +1,10 @@
+:root {
+    /* Colors */
+    --color-almostWhite: #F1F1F1;
+    --color-neonBlue: #8BCBFF;
+
+
+    /* Fonts */
+    --font--family-primary: 'Rubik', sans-serif;
+    --font--family-secondary: 'Montserrat', normal;
+}
