@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 
 import BackgroundImage from 'gatsby-background-image'
 
@@ -27,7 +27,6 @@ const HeaderBackground = ( { className, children }) => {
             Tag="section"
             className={className}
             fluid={imageData}
-            backgroundColor={`#040e18`}
         >
             {children}
 

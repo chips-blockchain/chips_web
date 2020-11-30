@@ -1,16 +1,9 @@
 import React from "react"
 import { graphql, Link, StaticQuery } from "gatsby"
-import "./layout.css";
-import styled from 'styled-components'
 import Img from 'gatsby-image'
+import ListLink from "../Atoms/ListLink"
 
-const ListLink = props => (
-  <li style={{ display: `inline-block`, marginRight: `1rem` }}>
-    <Link style={{ color: `white`, backgroundImage: `none`, textShadow: `none`}} to={props.to}>{props.children}</Link>
-  </li>
-)
-
-const Header = () => {
+export default function Header() {
   return (
     <StaticQuery
     query={graphql`
@@ -26,7 +19,7 @@ const Header = () => {
     `}
     render={data => (
       <header>
-        <Link to="/" style={{ textShadow: `none`, backgroundImage: `none` }}>
+        <Link to="/">
           <Img fixed={data.logoText.childImageSharp.fixed} alt="Logo" />
         </Link>
         <ul style={{ listStyle: `none`, float: `right` }}>
@@ -36,19 +29,9 @@ const Header = () => {
           <ListLink to="#">Articles</ListLink>
           <ListLink to="#">FAQ</ListLink>
         </ul>
-    </header>
+      </header>
     )}
   />
 
   )
 }
-
-const StyledHeader = styled(Header)`
-    width: 100%;
-    min-height: 400vh;
-    background-size: cover;
-    background-color: transparent;
-    paddding: 45px;
-`
-
-export default StyledHeader

@@ -1,7 +1,7 @@
 import React from "react"
 import "./layout.css";
 import "../styles/variables.css";
-import StyledBackgroundSection from "./BackgroundImage"
+import StyledBackgroundSection from "./Atoms/BackgroundImage"
 
 export default function Layout({ children }) {
   return (
