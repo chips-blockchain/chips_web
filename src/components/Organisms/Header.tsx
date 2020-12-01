@@ -1,37 +1,26 @@
 import React from "react"
 import { graphql, Link, StaticQuery } from "gatsby"
 import Img from 'gatsby-image'
-import ListLink from "../Atoms/ListLink"
+import Navigation from "../Molecules/Navigation"
+import { css } from '@emotion/core'
 
-export default function Header() {
+const style = css`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 1600px;
+  margin: auto;
+
+`
+export default function Header({ logoImage, menuLinks }) {
   return (
-    <StaticQuery
-    query={graphql`
-      query {
-        logoText: file(relativePath: { eq: "chips_logo_text.png" }) {
-          childImageSharp {
-            fixed(quality: 90, width: 200, height: 66) {
-              ...GatsbyImageSharpFixed
-            }
-          }
-        }
-      }
-    `}
-    render={data => (
-      <header>
+      <header css={style}>
         <Link to="/">
-          <Img fixed={data.logoText.childImageSharp.fixed} alt="Logo" />
+          <Img fixed={logoImage} alt="Logo" />
         </Link>
-        <ul style={{ listStyle: `none`, float: `right` }}>
-          <ListLink to="#">About</ListLink>
-          <ListLink to="#">Development</ListLink>
-          <ListLink to="#">Community</ListLink>
-          <ListLink to="#">Articles</ListLink>
-          <ListLink to="#">FAQ</ListLink>
-        </ul>
+       <Navigation
+          menuLinks={menuLinks}
+       ></Navigation>
       </header>
-    )}
-  />
-
-  )
+    )
 }
