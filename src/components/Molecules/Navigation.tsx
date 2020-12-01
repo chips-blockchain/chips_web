@@ -2,13 +2,13 @@ import React from "react"
 import NavigationLink from "../Atoms/NavigationLink"
 
 
-const Navigation = ({ menuLinks }) => (
+const Navigation = ({ menuLinks, textColor }) => (
     <div>
         {menuLinks.map(link => (
             <NavigationLink
                 to={link.link}
                 key={link.name}
-                textColor={'white'}
+                textColor={textColor}
                 activeClassName="active"
                 partiallyActive={link.partiallyActive}
             >

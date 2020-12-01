@@ -12,7 +12,7 @@ const style = css`
   margin: auto;
 
 `
-export default function Header({ logoImage, menuLinks }) {
+export default function Header({ logoImage, menuLinks, navigationColor }) {
   return (
       <header css={style}>
         <Link to="/">
@@ -20,7 +20,8 @@ export default function Header({ logoImage, menuLinks }) {
         </Link>
        <Navigation
           menuLinks={menuLinks}
-       ></Navigation>
+          textColor={navigationColor}
+       />
       </header>
     )
 }

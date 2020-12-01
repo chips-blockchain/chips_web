@@ -43,6 +43,7 @@ export default function Home({data}) {
         <Header 
           logoImage={data.logoText.childImageSharp.fixed}
           menuLinks={menuLinks}
+          navigationColor={'var(--color-almostWhite)'}
         />
         <BackgroundImage
             Tag="section"
