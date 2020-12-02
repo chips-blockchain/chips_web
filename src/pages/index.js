@@ -1,19 +1,12 @@
 import React from "react"
-import Img from 'gatsby-image'
 import { graphql } from 'gatsby'
 
 import Layout from "../templates/Layout"
-import styled from '@emotion/styled'
 import BackgroundImage from 'gatsby-background-image'
 import Header from "../components/Organisms/Header"
+import Hero from "../components/Organisms/Hero"
+import About from "../components/Organisms/About"
 
-import "./index.module.css"
-
-const HeaderContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-`
 const menuLinks = [
   {
     link: '#',
@@ -38,26 +31,28 @@ const menuLinks = [
 ]
 
 export default function Home({data}) {
+  console.log(data)
   return (
     <Layout>
-        <Header 
-          logoImage={data.logoText.childImageSharp.fixed}
-          menuLinks={menuLinks}
-          navigationColor={'var(--color-almostWhite)'}
-        />
         <BackgroundImage
             Tag="section"
-            fluid={data.bg.childImageSharp.fluid}
+            fluid={data.headerImage.childImageSharp.fluid}
+            style={{height: '900px'}}
+        >
+          <Header 
+            logoImage={data.logoText.childImageSharp.fixed}
+            menuLinks={menuLinks}
+            navigationColor={'var(--color-almostWhite)'}
+          />
+          <Hero 
+            title={'CHIPS revolutionises online gambling'}
+            text={'The project aims to bring truly decentralized, trust-less, peer-to-peer, and secure, blockchain casino style games.'}
+            logoImg={data.logo.childImageSharp.fluid}
+            icon1={data.github.childImageSharp.fixed}
+            icon2={data.discord.childImageSharp.fixed}
         />
-        <HeaderContainer>
-          <div style={{width: `100%`, maxWidth: `1000px`, margin: `auto`}}>
-            <Img style={{ maxWidth: `575px`}} fluid={data.logo.childImageSharp.fluid} />
-          </div>
-          <div className="headerText">
-            <h1>CHIPS revolutionises online gambling</h1>
-            <p>The project aims to bring truly decentralized, trust-less, peer-to-peer, and secure, blockchain casino style games.</p>
-          </div>
-        </HeaderContainer>
+        </BackgroundImage>
+        <About header={data.whatischips.childImageSharp.fixed} />
      </Layout>
   )
 }
@@ -71,7 +66,7 @@ export const query =  graphql`
         }
       }
     },
-    bg: file(relativePath: { eq: "bgx1.png"}) {
+    headerImage: file(relativePath: { eq: "header_clean.png"}) {
       childImageSharp {
           fluid(quality: 90, maxWidth: 1920) {
               ...GatsbyImageSharpFluid_withWebp
@@ -80,7 +75,28 @@ export const query =  graphql`
     },
     logoText: file(relativePath: { eq: "chips_logo_text.png" }) {
       childImageSharp {
-        fixed(quality: 90, width: 200, height: 66) {
+        fixed(quality: 100, width: 200, height: 66) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    },
+    github: file(relativePath: { eq: "github.png" }) {
+      childImageSharp {
+        fixed(quality: 90, width: 30, height: 30) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    },
+    discord: file(relativePath: { eq: "discord.png" }) {
+      childImageSharp {
+        fixed(quality: 90, width: 30, height: 30) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    },
+    whatischips: file(relativePath: { eq: "whatischips.png" }) {
+      childImageSharp {
+        fixed(quality: 90, width: 650, height: 90) {
           ...GatsbyImageSharpFixed
         }
       }
