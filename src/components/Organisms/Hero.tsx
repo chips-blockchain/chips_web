@@ -25,8 +25,8 @@ const defaultProps = {
 const HeroContainer=styled.div`
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    max-width: 1800px;
+    justify-content: space-between;
+    max-width: 1450px;
     margin: auto;
     padding-top: 4.5rem;
 `
