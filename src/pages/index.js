@@ -6,32 +6,10 @@ import BackgroundImage from 'gatsby-background-image'
 import Header from "../components/Organisms/Header"
 import Hero from "../components/Organisms/Hero"
 import About from "../components/Organisms/About"
-
-const menuLinks = [
-  {
-    link: '#',
-    name: 'About'
-  },
-  {
-    link: '#',
-    name: 'Development'
-  },
-  {
-    link: '#',
-    name: 'Community'
-  },
-  {
-    link: '#',
-    name: 'Articles'
-  },
-  {
-    link: '#',
-    name: 'FAQ'
-  }            
-]
+import { menuLinks } from "../data/menuLinks"
+import { getBenefitsData } from "../utils/dataHelper"
 
 export default function Home({data}) {
-  console.log(data)
   return (
     <Layout>
         <BackgroundImage
@@ -52,7 +30,10 @@ export default function Home({data}) {
             icon2={data.discord.childImageSharp.fixed}
         />
         </BackgroundImage>
-        <About header={data.whatischips.childImageSharp.fixed} />
+        <About 
+          header={data.whatischips.childImageSharp.fixed} 
+          benefits={getBenefitsData(data)}
+          />
      </Layout>
   )
 }
@@ -100,6 +81,34 @@ export const query =  graphql`
           ...GatsbyImageSharpFixed
         }
       }
-    }
+    },
+    benefitSecure: file(relativePath: { eq: "benefit-secure.png" }) {
+      childImageSharp {
+        fixed(quality: 90, width: 300, height: 300) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    },    
+    benefitShortTime: file(relativePath: { eq: "benefit-short-wait-times.png" }) {
+      childImageSharp {
+        fixed(quality: 90, width: 300, height: 300) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    },    
+    benefitRealTime: file(relativePath: { eq: "benefit-real-time-betting.png" }) {
+      childImageSharp {
+        fixed(quality: 90, width: 300, height: 300) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    },    
+    benefitBtcTech: file(relativePath: { eq: "benefit-btc-tech.png" }) {
+      childImageSharp {
+        fixed(quality: 90, width: 300, height: 300) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    },
   }
 `

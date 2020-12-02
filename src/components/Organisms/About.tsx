@@ -4,13 +4,14 @@ import Img from 'gatsby-image'
 import Navigation from "../Molecules/Navigation"
 import { css } from '@emotion/core'
 import styled from "@emotion/styled"
+import BenefitCard from "../Molecules/BenefitCard"
 
 const AboutSection = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 7rem;
+  margin-top: 9rem;
   height: 100%;
 `
 
@@ -24,12 +25,21 @@ const PangeaLink = styled.a`
 const Description = styled.p`
   margin-top: 3rem;
   color: var(--color-almostWhite);
-  font-size: var(--font-size-h2);
+  font-size: var(--font-size-h1);
   text-align: center;
   line-heigth: var(--line-height-1);
 `
 
-export default function About({ header}) {
+const BenefitsSection = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin-top: 4rem;
+  background-color: #19074F;
+  opacity: 1;
+  padding: 1rem;
+`
+
+export default function About({ header, benefits}) {
   return (
       <AboutSection>
           <Img fixed={header}></Img>
@@ -37,6 +47,14 @@ export default function About({ header}) {
             <ChipsLink href="#">CHIPS</ChipsLink> is a cryptocurrency used to play poker games <br/> 
             powered by the <PangeaLink href="#">Pangea Protocol</PangeaLink>.
           </Description>
+          <BenefitsSection>
+            {benefits.map((benefit, key) => (
+              <BenefitCard
+                image={benefit.image}
+                key={key}
+              />
+            ))}
+          </BenefitsSection>
       </AboutSection>
     )
 }
