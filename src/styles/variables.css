@@ -11,9 +11,11 @@
 
     /* Font sizes */
     --font-size-h1: 1.875rem;    /* 20px */
-    --font-size-h2: 1.5rem;    /* 24px */
-    --font-size-h3: 1.25rem; /* 20px */
+    --font-size-h2: 1.5rem;      /* 24px */
+    --font-size-h3: 1.25rem;     /* 20px */
+    --font-size-p: 1rem;         /* 16px */
 
     /* Line heights */
-    --line-height-1: 2.5rem;
+    --line-height-1: 2.5rem;  /* 40px */
+    --line-height-2: 1.25rem; /* 20px */
 }
