@@ -3,25 +3,27 @@ import { graphql, Link, StaticQuery } from "gatsby"
 import Img from 'gatsby-image'
 import Navigation from "../Molecules/Navigation"
 import { css } from '@emotion/core'
+import styled from "@emotion/styled"
 
-const style = css`
+const StyledHeader = styled.header`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  max-width: 1600px;
+  max-width: 1450px;
   margin: auto;
-
+  padding-top: 50px;
 `
+
 export default function Header({ logoImage, menuLinks, navigationColor }) {
   return (
-      <header css={style}>
+      <StyledHeader>
         <Link to="/">
-          <Img fixed={logoImage} alt="Logo" />
+          <Img fixed={logoImage}></Img>
         </Link>
        <Navigation
           menuLinks={menuLinks}
           textColor={navigationColor}
        />
-      </header>
+      </StyledHeader>
     )
 }
