@@ -7,7 +7,7 @@ const HeroText = styled.p`
   font-size: var(--font-size-h2);
   font-family: var(--font-family-secondary);
   font-weight: 400;
-  width: 630px;
+  max-width: 630px;
   margin-top: 0px;
 `;
 
