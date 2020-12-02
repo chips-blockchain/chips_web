@@ -26,7 +26,7 @@ const HeroContainer=styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    max-width: 1450px;
+    max-width: 1400px;
     margin: auto;
     padding-top: 4.5rem;
 `
