@@ -6,6 +6,7 @@ import BackgroundImage from 'gatsby-background-image'
 import Header from "../components/Organisms/Header"
 import Hero from "../components/Organisms/Hero"
 import About from "../components/Organisms/About"
+import Why from "../components/Organisms/Why"
 import { menuLinks } from "../data/menuLinks"
 import { getBenefitsData } from "../utils/dataHelper"
 
@@ -34,6 +35,7 @@ export default function Home({data}) {
           header={data.whatischips.childImageSharp.fixed} 
           benefits={getBenefitsData(data)}
           />
+        <Why />
      </Layout>
   )
 }
