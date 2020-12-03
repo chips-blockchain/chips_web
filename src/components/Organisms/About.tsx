@@ -34,7 +34,7 @@ const BenefitsSection = styled.div`
   display: flex;
   flex-direction: row;
   margin-top: 4rem;
-  background-color: #19074F;
+  background-color: var(--color-veryDarkPurple);
   opacity: 1;
   padding: 1rem;
 `

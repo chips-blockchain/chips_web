@@ -5,6 +5,7 @@
     --color-neonPink: #E16AE3;
     --color-neonGreen: #9FD39E;
     --color-darkPurple: #240D68;
+    --color-veryDarkPurple: #19074F;
 
     /* Fonts */
     --font--family-primary: 'Rubik', sans-serif;
@@ -18,5 +19,6 @@
 
     /* Line heights */
     --line-height-1: 2.5rem;  /* 40px */
-    --line-height-2: 1.25rem; /* 20px */
+    --line-height-2: 1.875rem; /* 30px */
+    --line-height-3: 1.25rem;  /* 20px */
 }
