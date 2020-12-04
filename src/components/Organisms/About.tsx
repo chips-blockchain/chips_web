@@ -33,10 +33,14 @@ const Description = styled.p`
 const BenefitsSection = styled.div`
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
   margin-top: 4rem;
   background-color: var(--color-veryDarkPurple);
   opacity: 1;
   padding: 1rem;
+  align-items: center;
+  justify-content: center;
 `
 
 export default function About({ header, benefits}) {
