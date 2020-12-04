@@ -18,10 +18,14 @@ const defaultProps = {
 }
 
 const Container = styled.div`
-    position: relative;
-    li { 
-        position: absolute;
-    }
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px; 
+
+    div { grid-area: 1 / 1 / 2 / 2; } 
+    
 `
 
 const ThreeWayAnimation = ({  }): ReactElement => (
@@ -55,11 +59,9 @@ const ThreeWayAnimation = ({  }): ReactElement => (
             }
         render={data => (
         <Container>
-            <ul>
-                <li><Img fixed={data.part1.childImageSharp.fixed}/></li>                
-                <li><Img fixed={data.part2.childImageSharp.fixed}/></li>
-                <li><Img fixed={data.part3.childImageSharp.fixed}/></li>
-            </ul>
+            <Img className="one" fixed={data.part1.childImageSharp.fixed}/>              
+            <Img className="two" fixed={data.part2.childImageSharp.fixed}/>
+            <Img className="three" fixed={data.part3.childImageSharp.fixed}/>
         </Container>
         )}
     />
