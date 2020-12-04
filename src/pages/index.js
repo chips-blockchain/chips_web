@@ -35,7 +35,9 @@ export default function Home({data}) {
           header={data.whatischips.childImageSharp.fixed} 
           benefits={getBenefitsData(data)}
           />
-        <Why />
+        <Why 
+          header={data.whychips.childImageSharp.fixed} 
+          />
      </Layout>
   )
 }
@@ -77,9 +79,16 @@ export const query =  graphql`
         }
       }
     },
-    whatischips: file(relativePath: { eq: "whatischips.png" }) {
+    whatischips: file(relativePath: { eq: "text_whatischips.png" }) {
       childImageSharp {
         fixed(quality: 90, width: 650, height: 90) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    },
+    whychips: file(relativePath: { eq: "text_whychips.png" }) {
+      childImageSharp {
+        fixed(quality: 90, height: 300) {
           ...GatsbyImageSharpFixed
         }
       }

@@ -5,6 +5,7 @@ import { sampleBase64 } from "../../utils/sampleBase64"
 import { graphql, StaticQuery } from 'gatsby'
 import Title from "../Atoms/Title"
 import ThreeWayAnimation from "./ThreeWayAnimation"
+import Button from "../Atoms/Button"
 
 type BenefitCardProps = {
     image: FixedObject,
@@ -22,10 +23,12 @@ const defaultProps = {
 const ArticleContainer = styled.div`
     display: flex;
     flex-direction: row;
-    margin-top: 50px;
+    margin: 2rem;
     width: 900px;
-    padding: 70px 100px 70px 100px;
+    padding: 70px 100px;
     background-color: var(--color-veryDarkPurple);
+    border-radius: 5px;
+    box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0.25);
 
      p, h1 {
         color: var(--color-almostWhite);
@@ -33,13 +36,12 @@ const ArticleContainer = styled.div`
 
     h1 {
         text-transform: uppercase;
-        padding-bottom: 1rem;
     }
 
     p {
         font-size: var(--font-size-p);
         font-family: var(--font--family-secondary);
-        line-height: var(--line-height-3);
+        line-height: 140%;
         width: 500px;
     }
     button {
@@ -49,7 +51,7 @@ const ArticleContainer = styled.div`
     }
 `
 
-const ArticleCard = ({ image, title, text }: BenefitCardProps): ReactElement => (
+const ArticleCard = ({ image, title, text, theme }: BenefitCardProps): ReactElement => (
 
     <StaticQuery
         query={
@@ -65,12 +67,12 @@ const ArticleCard = ({ image, title, text }: BenefitCardProps): ReactElement => 
                 }`
             }
         render={data => (
-        <ArticleContainer>
+        <ArticleContainer >
             <div>
                 <h1>{title}</h1>
                 <Img fixed={data.del.childImageSharp.fixed}></Img>
                 <p>{text}</p>
-                <button></button>
+                <Button theme={theme}></Button>
             </div>
             <div>
                 <ThreeWayAnimation></ThreeWayAnimation>
