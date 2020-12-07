@@ -10,6 +10,10 @@ import Why from "../components/Organisms/Why"
 import PokerDapp from "../components/Organisms/PokerDapp"
 import { menuLinks } from "../data/menuLinks"
 import { getBenefitsData } from "../utils/dataHelper"
+import dealerPlayer from "../images/dealer-player.svg"
+import pangeaDappHeader from "../images/text_pangeapokerdapp.svg"
+import whatischips from "../images/text_whatischips.svg"
+import whychips from "../images/text_whychips.svg"
 
 export default function Home({data}) {
   return (
@@ -33,15 +37,16 @@ export default function Home({data}) {
         />
         </BackgroundImage>
         <About 
-          header={data.whatischips.childImageSharp.fluid} 
+          header={whatischips} 
           benefits={getBenefitsData(data)}
           />
         <Why 
-          header={data.whychips.childImageSharp.fluid} 
+          header={whychips} 
           />
           <PokerDapp
-            header={data.pokerDappHeader.childImageSharp.fluid}
+            header={pangeaDappHeader}
             pokerdapp={data.pokerdapp.childImageSharp.fluid}
+            dealerPlayer={dealerPlayer}
           />
      </Layout>
   )
@@ -84,20 +89,6 @@ export const query =  graphql`
         }
       }
     },
-    whatischips: file(relativePath: { eq: "text_whatischips.png" }) {
-      childImageSharp {
-        fluid(quality: 90, maxWidth: 300) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    },
-    whychips: file(relativePath: { eq: "text_whychips.png" }) {
-      childImageSharp {
-        fluid(quality: 90,  maxWidth: 300) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    },
     benefitSecure: file(relativePath: { eq: "benefit-secure.png" }) {
       childImageSharp {
         fixed(quality: 90, width: 300, height: 300) {
@@ -126,19 +117,12 @@ export const query =  graphql`
         }
       }
     },
-    pokerDappHeader: file(relativePath: { eq: "text_pangeapokerdapp.png" }) {
-      childImageSharp {
-        fluid(quality: 90,  maxWidth: 250) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    },
     pokerdapp: file(relativePath: { eq: "pokerdapp.jpg" }) {
       childImageSharp {
         fluid(quality: 90,  maxWidth: 300) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
-    }
+    },
   }
 `

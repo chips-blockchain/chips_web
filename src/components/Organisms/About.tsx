@@ -1,8 +1,4 @@
 import React from "react"
-import { graphql, Link, StaticQuery } from "gatsby"
-import Img from 'gatsby-image'
-import Navigation from "../Molecules/Navigation"
-import { css } from '@emotion/core'
 import styled from "@emotion/styled"
 import BenefitCard from "../Molecules/BenefitCard"
 
@@ -47,9 +43,7 @@ const BenefitsSection = styled.div`
 export default function About({ header, benefits}) {
   return (
       <AboutSection>
-          <div style={{width: `100%`, maxWidth: `700px`}}>
-            <Img fluid={header}></Img>
-          </div>
+          <img style={{width: `100%`, maxWidth: `700px`}} src={header}></img>
           <Description>
             <ChipsLink href="#">CHIPS</ChipsLink> is a cryptocurrency used to play poker games <br/> 
             powered by the <PangeaLink href="#">Pangea Protocol</PangeaLink>.

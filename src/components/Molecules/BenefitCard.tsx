@@ -1,16 +1,14 @@
 import React, { ReactElement } from "react"
 import styled from '@emotion/styled'
-import Img, { FixedObject } from "gatsby-image"
-import { sampleBase64 } from "../../utils/sampleBase64"
 
 type BenefitCardProps = {
-    image: FixedObject,
+    image: string,
     title: string,
     text: string
 }
 
 const defaultProps = {
-    image: sampleBase64,
+    image: "string",
     title: "Lorem Ipsum",
     /* 180 characters */
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lacus vel facilisis volutpat est velit. Lobortis sceler."
@@ -34,7 +32,7 @@ const BenefitCardContainer = styled.div`
 
 const BenefitCard = ({ image, title, text }: BenefitCardProps): ReactElement => (
     <BenefitCardContainer>
-        <Img style={{height: '250px', width: '250px'}} fixed={image}></Img>
+        <img style={{height: '250px', width: '250px'}} src={image}></img>        
         <h1>{title}</h1>
         <p>{text}</p>
     </BenefitCardContainer>

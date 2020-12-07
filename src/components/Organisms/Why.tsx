@@ -1,8 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
 import ArticleCard from "../Molecules/ArticleCard"
-import { FixedObject, FluidObject } from "gatsby-image"
-import Img from 'gatsby-image'
 
 const WhySection=styled.div`
     display: flex;
@@ -10,10 +8,6 @@ const WhySection=styled.div`
     justify-content: center;
     align-items: center;
     margin-top: 10rem;
-
-    img {
-        height: 50px;
-    }
 `
 
 type ArticleCard = {
@@ -24,7 +18,7 @@ type ArticleCard = {
 
 type WhyProps = {
     cards: Array<ArticleCard>,
-    header: FluidObject
+    header: string
 }
 
 
@@ -52,9 +46,7 @@ const defaultProps = {
 export default function Why({ cards, header }: WhyProps) {
   return (
         <WhySection>
-            <div style={{width: `100%`, maxWidth: `800px`}}>
-                <Img fluid={header}></Img>
-            </div>
+            <img style={{width: `700px`}} src={header}></img>
             {cards.map((card, key) => (
               <ArticleCard
                 title={card.title}
