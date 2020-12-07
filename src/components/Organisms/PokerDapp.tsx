@@ -49,11 +49,21 @@ const Text = styled.div`
     }
 `
 
-export default function PokerDapp({ header, pokerdapp }) {
+const BigTitle = styled.h1`
+    font-size: 60px;
+    text-transform: uppercase;
+    color: var(--color-neonBlue);
+    font-weight: bold;
+    font-family: var(--font--family-primary);
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+`
+
+export default function PokerDapp({ header, pokerdapp, dealerPlayer }) {
   return (
       <Container>
         <HeaderImageWrapper>
-            <Img fluid={header}></Img>
+            <img src={header}></img>
         </HeaderImageWrapper>
         <Content>
             <Text>
@@ -66,6 +76,8 @@ export default function PokerDapp({ header, pokerdapp }) {
                 <Img fluid={pokerdapp}></Img>
             </ImageWrapper>
         </Content>
+        <BigTitle>Are you a dealer or a player?</BigTitle>
+        <img style={{maxWidth: '1200px'}} src={dealerPlayer}></img>
       </Container>
     )
 }
