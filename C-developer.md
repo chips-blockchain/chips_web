@@ -21,7 +21,7 @@ Our core focus right now is to make the game a multiplayer, hence there is no ne
 ## Requirements
 - Very good understanding of C
 - Preferable love and interest in blockchain
-- Good communication (you talk to the team, you explain what you are doing, you do not disappear for weeks without a word, you plan your work, you make GitHub issues, etc.)
+- Good communication (you talk to the team, you explain what you are doing, you plan your work, you make GitHub issues, etc.)
 - Interest in the project
 - Full-time/Part-time (at least 15-20hrs a week)
 
