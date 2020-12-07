@@ -5,6 +5,8 @@ import Img, { FixedObject, FluidObject } from 'gatsby-image'
 import styled from '@emotion/styled'
 import { sampleBase64 } from "../../utils/sampleBase64"
 import ClickableIcon from "../Atoms/ClickableIcon"
+import github from "../../images/github.svg"
+import discord from "../../images/discord.svg"
 
 type HeroProps = {
     title: string,
@@ -46,8 +48,8 @@ const Hero = ({ title, text, logoImg, icon1, icon2 }: HeroProps) => (
             <Title>{title}</Title>
             <HeroText>{text}</HeroText>
             <div>
-                <ClickableIcon icon={icon1} link={'http://link.com'} />
-                <ClickableIcon icon={icon2} link={'http://link.com'} />
+                <ClickableIcon icon={github} link={'http://link.com'} />
+                <ClickableIcon icon={discord} link={'http://link.com'} />
             </div>
         </HeroTextContainer>
     </HeroContainer>

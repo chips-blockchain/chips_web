@@ -14,6 +14,7 @@ import dealerPlayer from "../images/dealer-player.svg"
 import pangeaDappHeader from "../images/text_pangeapokerdapp.svg"
 import whatischips from "../images/text_whatischips.svg"
 import whychips from "../images/text_whychips.svg"
+import Development from "../components/Organisms/Development"
 
 export default function Home({data}) {
   return (
@@ -32,8 +33,6 @@ export default function Home({data}) {
             title={'CHIPS revolutionises online gambling'}
             text={'The project aims to bring truly decentralized, trust-less, peer-to-peer, and secure, blockchain casino style games.'}
             logoImg={data.logo.childImageSharp.fluid}
-            icon1={data.github.childImageSharp.fixed}
-            icon2={data.discord.childImageSharp.fixed}
         />
         </BackgroundImage>
         <About 
@@ -48,6 +47,7 @@ export default function Home({data}) {
             pokerdapp={data.pokerdapp.childImageSharp.fluid}
             dealerPlayer={dealerPlayer}
           />
+          <Development></Development>
      </Layout>
   )
 }

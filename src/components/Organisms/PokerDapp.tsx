@@ -77,7 +77,7 @@ export default function PokerDapp({ header, pokerdapp, dealerPlayer }) {
             </ImageWrapper>
         </Content>
         <BigTitle>Are you a dealer or a player?</BigTitle>
-        <img style={{maxWidth: '1200px'}} src={dealerPlayer}></img>
+        <img style={{maxWidth: '1350px'}} src={dealerPlayer}></img>
       </Container>
     )
 }

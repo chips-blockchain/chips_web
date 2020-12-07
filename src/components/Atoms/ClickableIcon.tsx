@@ -1,17 +1,15 @@
 import React, { ReactElement } from "react"
-import { FixedObject } from "gatsby-image"
-import Img from "gatsby-image"
-import { sampleBase64 } from "../../utils/sampleBase64"
 import styled from '@emotion/styled'
+import github from "../../images/github.svg"
 
 type ClickableIconProps = {
     link: string,
-    icon: FixedObject
+    icon: string
 }
 
 const defaultProps = {
     link: "/",
-    icon: sampleBase64
+    icon: github
 }
 
 const IconLink = styled.a`
@@ -20,7 +18,7 @@ const IconLink = styled.a`
 
 const ClickableIcon = ({ link, icon }: ClickableIconProps): ReactElement => (
     <IconLink href={link}>
-        <Img fixed={icon}/>
+        <img src={icon}></img>
     </IconLink>
 )
 

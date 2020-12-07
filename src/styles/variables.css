@@ -12,9 +12,11 @@
     --font--family-secondary: 'Montserrat', normal;
 
     /* Font sizes */
+    --font-size-massive: 3.75rem; /* 60px */
     --font-size-h1: 1.875rem;    /* 20px */
     --font-size-h2: 1.5rem;      /* 24px */
     --font-size-h3: 1.25rem;     /* 20px */
+    --font-size-h4: 1.125rem;    /* 18px */
     --font-size-p: 1rem;         /* 16px */
 
     /* Line heights */
