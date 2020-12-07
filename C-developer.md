@@ -1,5 +1,5 @@
 
-# CHIPS is looking for a C developer to work on a revolutionary Poker game implementation!
+# CHIPS is looking for a C developer!
 
 ## About CHIPS
 
