@@ -17,7 +17,7 @@ const defaultProps = {
 }
 
 const BenefitCardContainer = styled.div`
-    width: 300px;
+    width: 250px;
     padding: 1rem;
 
     & > p, h1 {
@@ -34,7 +34,7 @@ const BenefitCardContainer = styled.div`
 
 const BenefitCard = ({ image, title, text }: BenefitCardProps): ReactElement => (
     <BenefitCardContainer>
-        <Img style={{height: '300px', width: '300px'}} fixed={image}></Img>
+        <Img style={{height: '250px', width: '250px'}} fixed={image}></Img>
         <h1>{title}</h1>
         <p>{text}</p>
     </BenefitCardContainer>

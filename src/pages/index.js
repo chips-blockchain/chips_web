@@ -32,11 +32,11 @@ export default function Home({data}) {
         />
         </BackgroundImage>
         <About 
-          header={data.whatischips.childImageSharp.fixed} 
+          header={data.whatischips.childImageSharp.fluid} 
           benefits={getBenefitsData(data)}
           />
         <Why 
-          header={data.whychips.childImageSharp.fixed} 
+          header={data.whychips.childImageSharp.fluid} 
           />
      </Layout>
   )
@@ -81,15 +81,15 @@ export const query =  graphql`
     },
     whatischips: file(relativePath: { eq: "text_whatischips.png" }) {
       childImageSharp {
-        fixed(quality: 90, width: 650, height: 90) {
-          ...GatsbyImageSharpFixed
+        fluid(quality: 90, maxWidth: 300) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     },
     whychips: file(relativePath: { eq: "text_whychips.png" }) {
       childImageSharp {
-        fixed(quality: 90, height: 300) {
-          ...GatsbyImageSharpFixed
+        fluid(quality: 90,  maxWidth: 300) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     },

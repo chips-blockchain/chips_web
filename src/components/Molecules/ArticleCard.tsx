@@ -3,29 +3,39 @@ import styled from '@emotion/styled'
 import Img, { FixedObject } from "gatsby-image"
 import { sampleBase64 } from "../../utils/sampleBase64"
 import { graphql, StaticQuery } from 'gatsby'
-import Title from "../Atoms/Title"
 import ThreeWayAnimation from "./ThreeWayAnimation"
 import Button from "../Atoms/Button"
 
-type BenefitCardProps = {
+type ArticleCardProps = {
     image: FixedObject,
     title: string,
-    text: string
+    text: string,
+    orientation: boolean,
+    theme: string,
+    themeImage: string
 }
 
 const defaultProps = {
     image: sampleBase64,
     title: "Lorem Ipsum",
     /* 180 characters */
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lacus vel facilisis volutpat est velit. Lobortis sceler."
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lacus vel facilisis volutpat est velit. Lobortis sceler.",
+    theme: 'pink',
+    themeImage: 'machine'
 }
 
 const ArticleContainer = styled.div`
     display: flex;
     flex-direction: row;
+    flex-flow: row wrap;
+
     margin: 2rem;
-    width: 900px;
-    padding: 70px 100px;
+    height: 450px;
+    width: 970px;
+
+    padding-left: 3rem;
+    padding-right: 0rem;
+
     background-color: var(--color-veryDarkPurple);
     border-radius: 5px;
     box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0.25);
@@ -42,16 +52,21 @@ const ArticleContainer = styled.div`
         font-size: var(--font-size-p);
         font-family: var(--font--family-secondary);
         line-height: 140%;
-        width: 500px;
-    }
-    button {
-        width: 200px;
-        height: 60px;
-        margin-top: 2rem;
+        max-width: 430px;
+        min-width: 200px;
+        margin-bottom: 2rem;
     }
 `
 
-const ArticleCard = ({ image, title, text, theme }: BenefitCardProps): ReactElement => (
+const CardContent = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 3rem;
+    padding-right: 3rem;
+`
+
+const ArticleCard = ({ orientation, title, text, theme, themeImage }: ArticleCardProps): ReactElement => (
 
     <StaticQuery
         query={
@@ -68,15 +83,18 @@ const ArticleCard = ({ image, title, text, theme }: BenefitCardProps): ReactElem
             }
         render={data => (
         <ArticleContainer >
-            <div>
+            {orientation &&
+                <ThreeWayAnimation themeImage={themeImage}></ThreeWayAnimation>
+            }
+            <CardContent>
                 <h1>{title}</h1>
                 <Img fixed={data.del.childImageSharp.fixed}></Img>
                 <p>{text}</p>
                 <Button theme={theme}></Button>
-            </div>
-            <div>
+            </CardContent>
+            {!orientation &&
                 <ThreeWayAnimation></ThreeWayAnimation>
-            </div>
+            }
         </ArticleContainer>
         )}
     />

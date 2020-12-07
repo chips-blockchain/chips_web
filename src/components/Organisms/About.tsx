@@ -22,6 +22,7 @@ const ChipsLink = styled.a`
 const PangeaLink = styled.a`
   color: var(--color-neonGreen)
 `
+
 const Description = styled.p`
   margin-top: 3rem;
   color: var(--color-almostWhite);
@@ -46,7 +47,9 @@ const BenefitsSection = styled.div`
 export default function About({ header, benefits}) {
   return (
       <AboutSection>
-          <Img fixed={header}></Img>
+          <div style={{width: `100%`, maxWidth: `700px`}}>
+            <Img fluid={header}></Img>
+          </div>
           <Description>
             <ChipsLink href="#">CHIPS</ChipsLink> is a cryptocurrency used to play poker games <br/> 
             powered by the <PangeaLink href="#">Pangea Protocol</PangeaLink>.

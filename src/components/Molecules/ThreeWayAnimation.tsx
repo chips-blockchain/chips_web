@@ -1,20 +1,14 @@
 import React, { ReactElement } from "react"
 import styled from '@emotion/styled'
 import Img, { FixedObject } from "gatsby-image"
-import { sampleBase64 } from "../../utils/sampleBase64"
 import { graphql, StaticQuery } from "gatsby"
 
-type BenefitCardProps = {
-    image: FixedObject,
-    title: string,
-    text: string
+type ThreeWayAnimationProps = {
+    themeImage: string
 }
 
 const defaultProps = {
-    image: sampleBase64,
-    title: "Lorem Ipsum",
-    /* 180 characters */
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lacus vel facilisis volutpat est velit. Lobortis sceler."
+    themeImage: 'coin'
 }
 
 const Container = styled.div`
@@ -25,48 +19,94 @@ const Container = styled.div`
     grid-row-gap: 0px; 
 
     div { grid-area: 1 / 1 / 2 / 2; } 
+    justify-items: center;
+    align-items: center;
+    padding: 1rem;
     
 `
 
-const ThreeWayAnimation = ({  }): ReactElement => (
-
+const ThreeWayAnimation = ({ themeImage }: ThreeWayAnimationProps): ReactElement => {
+    return (
     <StaticQuery
         query={
             graphql`
                 query {
-                    part1: file(relativePath: { eq: "card_chips_chip.png" }) {
+                    coinPart1: file(relativePath: { eq: "card_chips_chip.png" }) {
                         childImageSharp {
-                            fixed(quality: 90) {
+                            fixed(quality: 90, height: 300, width: 400) {
                             ...GatsbyImageSharpFixed
                             }
                         }
                     },
-                    part2: file(relativePath: { eq: "card_chips_dice.png" }) {
+                    coinPart2: file(relativePath: { eq: "card_chips_dice.png" }) {
                         childImageSharp {
-                            fixed(quality: 90) {
+                            fixed(quality: 90, height: 300, width: 400) {
                             ...GatsbyImageSharpFixed
                             }
                         }
                     },
-                    part3: file(relativePath: { eq: "card_chips_gold.png" }) {
+                    coinPart3: file(relativePath: { eq: "card_chips_gold.png" }) {
                         childImageSharp {
-                            fixed(quality: 90) {
+                            fixed(quality: 90, height: 300, width: 400) {
                             ...GatsbyImageSharpFixed
                             }
                         }
-                    }                                       
+                    },
+                    cardsPart1: file(relativePath: { eq: "card_rel_card.png" }) {
+                        childImageSharp {
+                            fixed(quality: 90, height: 300, width: 400) {
+                            ...GatsbyImageSharpFixed
+                            }
+                        }
+                    },
+                    cardsPart2: file(relativePath: { eq: "card_rel_chips.png" }) {
+                        childImageSharp {
+                            fixed(quality: 90, height: 300, width: 400) {
+                            ...GatsbyImageSharpFixed
+                            }
+                        }
+                    },
+                    cardsPart3: file(relativePath: { eq: "card_rel_dice.png" }) {
+                        childImageSharp {
+                            fixed(quality: 90, height: 300, width: 400) {
+                            ...GatsbyImageSharpFixed
+                            }
+                        }
+                    },
+                    machinePart1: file(relativePath: { eq: "card_safe_body.png" }) {
+                        childImageSharp {
+                            fixed(quality: 90, height: 300) {
+                            ...GatsbyImageSharpFixed
+                            }
+                        }
+                    },
+                    machinePart2: file(relativePath: { eq: "card_safe_coins.png" }) {
+                        childImageSharp {
+                            fixed(quality: 90, height: 300) {
+                            ...GatsbyImageSharpFixed
+                            }
+                        }
+                    },
+                    machinePart3: file(relativePath: { eq: "card_safe_glow.png" }) {
+                        childImageSharp {
+                            fixed(quality: 90, height: 300) {
+                            ...GatsbyImageSharpFixed
+                            }
+                        }
+                    }                                          
                 }`
             }
-        render={data => (
+        render={data =>  {
+            return(
         <Container>
-            <Img className="one" fixed={data.part1.childImageSharp.fixed}/>              
-            <Img className="two" fixed={data.part2.childImageSharp.fixed}/>
-            <Img className="three" fixed={data.part3.childImageSharp.fixed}/>
+            <Img className="one" fixed={data[themeImage.concat('Part1')].childImageSharp.fixed}/>              
+            <Img className="two" fixed={data[themeImage.concat('Part2')].childImageSharp.fixed}/>
+            <Img className="three" fixed={data[themeImage.concat('Part3')].childImageSharp.fixed}/>
         </Container>
-        )}
+        )}}
     />
     )
-
+        }
 
 ThreeWayAnimation.defaultProps = defaultProps
 export default ThreeWayAnimation
