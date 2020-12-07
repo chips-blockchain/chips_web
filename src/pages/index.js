@@ -7,6 +7,7 @@ import Header from "../components/Organisms/Header"
 import Hero from "../components/Organisms/Hero"
 import About from "../components/Organisms/About"
 import Why from "../components/Organisms/Why"
+import PokerDapp from "../components/Organisms/PokerDapp"
 import { menuLinks } from "../data/menuLinks"
 import { getBenefitsData } from "../utils/dataHelper"
 
@@ -37,6 +38,10 @@ export default function Home({data}) {
           />
         <Why 
           header={data.whychips.childImageSharp.fluid} 
+          />
+          <PokerDapp
+            header={data.pokerDappHeader.childImageSharp.fluid}
+            pokerdapp={data.pokerdapp.childImageSharp.fluid}
           />
      </Layout>
   )
@@ -121,5 +126,19 @@ export const query =  graphql`
         }
       }
     },
+    pokerDappHeader: file(relativePath: { eq: "text_pangeapokerdapp.png" }) {
+      childImageSharp {
+        fluid(quality: 90,  maxWidth: 250) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    },
+    pokerdapp: file(relativePath: { eq: "pokerdapp.jpg" }) {
+      childImageSharp {
+        fluid(quality: 90,  maxWidth: 300) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
   }
 `
