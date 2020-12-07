@@ -1,11 +1,14 @@
 
-# CHIPS is looking for a C developer!
+# CHIPS is looking for a C developer to work on a revolutionary Poker game implementation!
 
 ## About CHIPS
 
 CHIPS enables decentralised, peer-to-peer, trustless, on-the-blockchain, casino style games.
 
 At the moment we are working on a poker game, which uses CHIPS and Pangea Protocol.
+
+Pangea Poker is a truly decentralized, peer-to-peer gaming technology.  It is the result of complex mathematics & software development with cryptocurrency implementation.  The purpose is to build a new form of online poker experience which  is trustless, secure, and immutable.
+
 Our core focus right now is to make the game a multiplayer, hence there is no need to understand all the intricacies of the Pangea Protocol implementation and cryptographic details. If you like the job you can always study all of that in detail later.
 
 
@@ -16,6 +19,8 @@ Our core focus right now is to make the game a multiplayer, hence there is no ne
 [**Poker game GUI**](https://github.com/chips-blockchain/pangea-poker)
 
 [**Pangea Protocol**](https://discord.com/channels/455737840169386016/456084837758140426/784538374865682494)
+
+[**More information on the project**](docs.chips.cash/)
 
 
 ## Requirements
@@ -37,3 +42,6 @@ Corresponding GUI which consumes the API is at https://github.com/chips-blockcha
 
 ## Money
 - Renumeration will be discussed with the candidate in person
+
+
+Please reach out to us on [CHIPS Discord](https://discord.gg/SQCSa2X). Talk to NutellaLicka or daria in case you are interested. 
