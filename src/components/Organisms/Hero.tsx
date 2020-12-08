@@ -4,8 +4,8 @@ import HeroText from "../Atoms/HeroText"
 import styled from '@emotion/styled'
 import { sampleBase64 } from "../../utils/sampleBase64"
 import ClickableIcon from "../Atoms/ClickableIcon"
-import github from "../../images/github.svg"
-import discord from "../../images/discord.svg"
+import github from "../../images/icon_github.svg"
+import discord from "../../images/icon_discord.svg"
 
 type HeroProps = {
     title: string,
@@ -22,7 +22,7 @@ const defaultProps = {
 const HeroContainer=styled.div`
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: right;
     max-width: 1400px;
     margin: auto;
     padding-top: 4.5rem;
@@ -36,9 +36,6 @@ const HeroTextContainer = styled.div`
 
 const Hero = ({ title, text, logoImg }: HeroProps) => (
     <HeroContainer>
-        <div style={{width: `100%`, maxWidth: `575px`}}>
-            <img src={logoImg} />
-        </div>
         <HeroTextContainer>
             <Title>{title}</Title>
             <HeroText>{text}</HeroText>

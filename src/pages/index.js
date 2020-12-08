@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from 'gatsby'
 import styled from "@emotion/styled"
-import headerImage from "../images/header_clean.svg"
+import headerImage from "../images/header.svg"
 import logoText from "../images/chips_logo_text.svg"
 import logo from "../images/chips_logo_chip.svg"
 

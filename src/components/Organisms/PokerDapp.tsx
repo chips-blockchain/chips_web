@@ -24,14 +24,14 @@ const Content = styled.div`
 
 const ImageWrapper = styled.div`
     width: 100%;
-    max-width: 800px;
+    max-width: 600px;
     border: 5px solid var(--color-neonGreen);
     box-sizing: border-box;
 `
 
 const HeaderImageWrapper = styled.div`
     width: 100%;
-    max-width: 1000px;
+    max-width: 700px;
     margin-bottom: 3rem;
 `
 
@@ -40,11 +40,11 @@ const Text = styled.div`
     padding-right: 4rem;
 
     p {
-        font-size: var(--font-size-h3);
+        font-size: var(--font-size-h4);
     }
     h1 {
-        margin-top: 3rem;
-        margin-bottom: 1rem;
+        margin-top: 2rem;
+        margin-bottom: 0.5rem;
         color: var(--color-neonPink);
     }
 `
@@ -76,8 +76,8 @@ export default function PokerDapp({ header, pokerdapp, dealerPlayer }) {
                 <Img fluid={pokerdapp}></Img>
             </ImageWrapper>
         </Content>
-        <BigTitle>Are you a dealer or a player?</BigTitle>
-        <img style={{maxWidth: '1350px'}} src={dealerPlayer}></img>
+        {/* <BigTitle>Are you a dealer or a player?</BigTitle> */}
+        <img style={{maxWidth: '900px', marginTop: '10rem'}} src={dealerPlayer}></img>
       </Container>
     )
 }

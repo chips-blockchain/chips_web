@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react"
 import styled from '@emotion/styled'
-import github from "../../images/github.svg"
+import github from "../../images/icon_github.svg"
 
 type ClickableIconProps = {
     link: string,

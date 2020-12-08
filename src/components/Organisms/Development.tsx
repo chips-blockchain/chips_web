@@ -15,6 +15,7 @@ const Container=styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     margin-top: 5rem;
     padding: 10rem 10rem;
     background-image: url(${brickbg});
@@ -27,14 +28,14 @@ const Content=styled.div`
     align-items: left;
 
     & > p {
-        font-size: var(--font-size-h2);
+        font-size: var(--font-size-h3);
         font-family: var(--font--family-secondary);
     }
 `
 const Repositories=styled.div`
     display: flex;
     flex-flow: row wrap;
-    width: 1500px;
+    width: 1000px;
 `
 
 let text = `We are an open source project and we are always looking for contributors. 
@@ -44,8 +45,8 @@ Please feel free to join our Discord and reach out to NutellaLicka, sg777 and da
 const Development = ({  }: DevelopmentProps) => (
     <Container>
         <Content>
-            <img style={{marginLeft: '-1rem', width: '800px'}} src={development}></img>
-            <p style={{width: '900px'}}>{text}</p>
+            <img style={{marginLeft: '-1rem', width: '500px'}} src={development}></img>
+            <p style={{width: '700px'}}>{text}</p>
             <Repositories>
                 <Repository></Repository>
                 <Repository extraInfo={"The official alpha version has not been released yet. For more information on project updates please follow announcements in Discord and Twitter."}></Repository>

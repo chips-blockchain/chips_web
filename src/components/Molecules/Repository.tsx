@@ -1,7 +1,7 @@
 import React, { ReactElement } from "react"
 import styled from '@emotion/styled'
 import ClickableIcon from "../Atoms/ClickableIcon"
-import githubIcon from "../../images/github.svg"
+import githubIcon from "../../images/icon_github.svg"
 
 type RepositoryProps = {
     repositoryLink: string,
@@ -19,13 +19,13 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     margin-top: 5rem;
-    margin-right: 10rem;
+    margin-right: 5rem;
     & > p, h1 {
     }
 
     & > p {
-        width: 550px;
-        font-size: var(--font-size-h4);
+        width: 400px;
+        font-size: var(--font-size-p);
         font-family: var(--font--family-secondary);
     }
 
