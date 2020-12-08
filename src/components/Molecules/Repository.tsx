@@ -24,8 +24,9 @@ const Container = styled.div`
     }
 
     & > p {
-        width: 500px;
+        width: 550px;
         font-size: var(--font-size-h4);
+        font-family: var(--font--family-secondary);
     }
 
 `
@@ -34,10 +35,11 @@ const TitleWrapper = styled.div`
     flex-direction: row;
 
     & > a {
-        padding: 0
+        padding: 0;
+        padding-right: 1rem;
     }
     & > h1 {
-        margin: 0
+        margin: 0;
     }
 `
 

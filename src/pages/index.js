@@ -1,8 +1,11 @@
 import React from "react"
 import { graphql } from 'gatsby'
+import styled from "@emotion/styled"
+import headerImage from "../images/header_clean.svg"
+import logoText from "../images/chips_logo_text.svg"
+import logo from "../images/chips_logo_chip.svg"
 
 import Layout from "../templates/Layout"
-import BackgroundImage from 'gatsby-background-image'
 import Header from "../components/Organisms/Header"
 import Hero from "../components/Organisms/Hero"
 import About from "../components/Organisms/About"
@@ -16,25 +19,27 @@ import whatischips from "../images/text_whatischips.svg"
 import whychips from "../images/text_whychips.svg"
 import Development from "../components/Organisms/Development"
 
+const Background = styled.section`
+  background-image: url(${headerImage});
+  height: 900px;
+  background
+`
+
 export default function Home({data}) {
   return (
     <Layout>
-        <BackgroundImage
-            Tag="section"
-            fluid={data.headerImage.childImageSharp.fluid}
-            style={{height: '900px'}}
-        >
+      <Background>
           <Header 
-            logoImage={data.logoText.childImageSharp.fixed}
+            logoImage={logoText}
             menuLinks={menuLinks}
             navigationColor={'var(--color-almostWhite)'}
           />
           <Hero 
             title={'CHIPS revolutionises online gambling'}
             text={'The project aims to bring truly decentralized, trust-less, peer-to-peer, and secure, blockchain casino style games.'}
-            logoImg={data.logo.childImageSharp.fluid}
+            logoImg={logo}
         />
-        </BackgroundImage>
+        </Background>
         <About 
           header={whatischips} 
           benefits={getBenefitsData(data)}
