@@ -1,9 +1,7 @@
 import React from "react"
 import { graphql } from 'gatsby'
-import styled from "@emotion/styled"
-import headerImage from "../images/header.svg"
 import logoText from "../images/chips_logo_text.svg"
-import logo from "../images/chips_logo_chip.svg"
+import BackgroundImage from "gatsby-background-image";
 
 import Layout from "../templates/Layout"
 import Header from "../components/Organisms/Header"
@@ -19,16 +17,13 @@ import whatischips from "../images/text_whatischips.svg"
 import whychips from "../images/text_whychips.svg"
 import Development from "../components/Organisms/Development"
 
-const Background = styled.section`
-  background-image: url(${headerImage});
-  height: 900px;
-  background
-`
-
 export default function Home({data}) {
   return (
     <Layout>
-      <Background>
+      <BackgroundImage
+          Tag="section"
+          fluid={data.headerImage.childImageSharp.fluid}
+          style={{minHeight: '100vh'}}>
           <Header 
             logoImage={logoText}
             menuLinks={menuLinks}
@@ -37,9 +32,9 @@ export default function Home({data}) {
           <Hero 
             title={'CHIPS revolutionises online gambling'}
             text={'The project aims to bring truly decentralized, trust-less, peer-to-peer, and secure, blockchain casino style games.'}
-            logoImg={logo}
+            logoImg={data.logo.childImageSharp.fluid}
         />
-        </Background>
+        </BackgroundImage>
         <About 
           header={whatischips} 
           benefits={getBenefitsData(data)}
@@ -68,7 +63,7 @@ export const query =  graphql`
     },
     headerImage: file(relativePath: { eq: "header_clean.png"}) {
       childImageSharp {
-          fluid(quality: 90, maxWidth: 1920) {
+          fluid(quality: 100, maxWidth: 1920) {
               ...GatsbyImageSharpFluid_withWebp
           }
       }
