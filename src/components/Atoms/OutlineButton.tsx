@@ -4,17 +4,16 @@ import styled from '@emotion/styled'
 type OutlineButtonProps = {
     text: string,
     link: string,
-    bgColor: string
+    icon: string
 }
 
 const defaultProps = {
     text: "CHAT",
-    link: "https://chat.com",
-    bgColor: "#FFFFFF"
+    link: "https://chat.com"
 }
 
 
-const StyledButton = styled.button`
+const StyledButton = styled.div`
     width: 100px;
     height: 35px;
     text-transform: uppercase;
@@ -24,13 +23,16 @@ const StyledButton = styled.button`
     border-radius: 5px;
     border: solid 2px var(--color-almostWhite);
     background-color: ${props => props.color};
-    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `
 
-const OutlineButton = ({ text, link, bgColor }: OutlineButtonProps): ReactElement => (
-    <a href={link}>
-        <StyledButton color={bgColor}>
+const OutlineButton = ({ text, link, icon }: OutlineButtonProps): ReactElement => (
+    <a href={link} style={{textDecoration: 'none'}}>
+        <StyledButton>
             {text}
+             {icon && <img src={icon} />}
         </StyledButton>
     </a>
 )

@@ -37,7 +37,6 @@ const SocialBox = ({ icon, title, buttonText, buttonLink, color }: SocialBoxProp
         <OutlineButton 
             text={buttonText}
             link={buttonLink}
-            bgColor={color}
         />
     </Container>
 )
