@@ -7,9 +7,7 @@ const StyledHeader = styled.header`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  max-width: 1400px;
-  margin: auto;
-  padding-top: 50px;
+  padding: 1rem 7rem 0 5rem;
 `
 
 export default function Header({ logoImage, menuLinks, navigationColor }) {

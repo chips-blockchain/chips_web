@@ -34,10 +34,8 @@ const Container = styled.div`
 const HeroContainer=styled.div`
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    max-width: 1400px;
-    margin: auto;
-    padding-top: 4.5rem;
+    justify-content: space-evenly;
+    padding: 5rem;
 `
 
 const HeroTextContainer = styled.div`
