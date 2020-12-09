@@ -35,13 +35,30 @@ const HeroContainer=styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    padding: 5rem;
+    padding: 5rem;    
+    @media(max-width: 43em) {
+        flex-direction: column;
+        padding: 1rem;
+    }
 `
 
 const HeroTextContainer = styled.div`
     display: flex;
     flex-direction:column;
     padding-top: 5rem;
+    @media(max-width: 43em) {
+        background: rgba(25, 7, 79, 0.7);
+        padding: 2rem;
+    }
+`
+const LogoWrapper = styled.div`
+    width: 100%;
+    minWidth: 200px;
+    maxWidth: 575px;
+    @media(max-width: 43em) {
+        width: 400px;
+        margin: auto;
+    }
 `
 
 const CTAs = styled.div`
@@ -49,10 +66,17 @@ const CTAs = styled.div`
     flex-direction: row;
 
     & > a {
-        margin-right: 1rem
+        margin-right: 1rem;
 
         & > div {
             width: 180px
+        }
+    }
+    @media(max-width: 43em) {
+        flex-direction: column;
+        align-items: left;
+        & > div {
+            margin: 0.5rem;
         }
     }
 `
@@ -60,9 +84,9 @@ const CTAs = styled.div`
 const Hero = ({ title, text, logoImg, icon1, icon2 }: HeroProps) => (
     <Container>
         <HeroContainer>
-            <div style={{width: `100%`, maxWidth: `575px`}}>
+            <LogoWrapper>
                 <Img fluid={logoImg} />
-            </div>
+            </LogoWrapper>
             <HeroTextContainer>
                 <Title>{title}</Title>
                 <HeroText>{text}</HeroText>

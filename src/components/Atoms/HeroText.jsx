@@ -5,7 +5,7 @@ const HeroText = styled.p`
   color: var(--color-almostWhite);
   justify-content: left;
   font-size: var(--font-size-h2);
-  font-family: var(--font-family-secondary);
+  font-family: var(--font--family-secondary);
   font-weight: 400;
   max-width: 630px;
   margin-top: 0px;

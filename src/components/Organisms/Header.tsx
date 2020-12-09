@@ -8,13 +8,31 @@ const StyledHeader = styled.header`
   flex-direction: row;
   justify-content: space-between;
   padding: 1rem 7rem 0 5rem;
+
+
+  @media(max-width: 62em) {
+    padding: 1rem;
+  }
+
+  @media(max-width: 43em) {
+    & > img {
+      width: 100px;
+    }
+  }
+`
+
+const Logo = styled.img`
+  width: 200px;
+  @media(max-width: 43em) {
+    width: 100px;
+  }
 `
 
 export default function Header({ logoImage, menuLinks, navigationColor }) {
   return (
       <StyledHeader>
         <Link to="/">
-          <img style={{width: '200px'}} src={logoImage}></img>
+          <Logo src={logoImage}></Logo>
         </Link>
        <Navigation
           menuLinks={menuLinks}
