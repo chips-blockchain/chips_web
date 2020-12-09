@@ -18,6 +18,14 @@ const defaultProps = {
 }
 const NavigationContainer=styled.div`
     padding-top: 1.5rem;
+    a {
+        opacity: 0.7
+    }
+
+    a:hover {
+        color: var(--color-neonBlue);
+        opacity: 1;
+    }
 `
 
 const Navigation = ({ menuLinks, textColor }: NavigationProps): ReactElement => (
