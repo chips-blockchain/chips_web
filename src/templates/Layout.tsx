@@ -15,6 +15,7 @@ import mail from "../images/icon_mail.svg"
 import file from "../images/icon_file.svg"
 import twitter from "../images/icon_twitter.svg"
 import btc from "../images/icon_btc.svg"
+import BackgroundImage from "gatsby-background-image";
 
 
 const MainBackground = styled.section`
@@ -64,16 +65,12 @@ export default function Layout({ children }) {
 
   return (
     <div>
-      <MainBackground>
-        {children}  
-      </MainBackground>
-
-      {/* <BackgroundImage
+      <BackgroundImage
           Tag="section"
           fluid={data.bg.childImageSharp.fluid}
         >
           {children}  
-      </BackgroundImage> */}
+      </BackgroundImage>
       <Footer>
         <img style={{width: '800px'}} src={joincommunity}></img>      
         <SocialLinks>
