@@ -8,7 +8,6 @@ type BenefitCardProps = {
 }
 
 const defaultProps = {
-    image: "string",
     title: "Lorem Ipsum",
     /* 180 characters */
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lacus vel facilisis volutpat est velit. Lobortis sceler."
@@ -16,24 +15,37 @@ const defaultProps = {
 
 const BenefitCardContainer = styled.div`
     width: 250px;
-    padding: 1rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 
-    & > p, h1 {
+    h2 {
+        height: 40px;
+        text-transform: uppercase;
+    }
+    & > p, h2 {
         color: var(--color-almostWhite);
-        margin-left: 2rem;
+        margin-left: 1rem;
+    }
+
+    & > img {
+        width: 220px;
+        height: 220px;       
     }
 
     & > p {
         font-size: var(--font-size-p);
         font-family: var(--font--family-secondary);
-        line-height: var(--line-height-2);
+        line-height: 130%;
+        height: 100%;
     }
 `
 
 const BenefitCard = ({ image, title, text }: BenefitCardProps): ReactElement => (
     <BenefitCardContainer>
-        <img style={{height: '250px', width: '250px'}} src={image}></img>        
-        <h1>{title}</h1>
+        <img src={image}></img>        
+        <h2>{title}</h2>
         <p>{text}</p>
     </BenefitCardContainer>
 )
