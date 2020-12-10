@@ -54,7 +54,8 @@ const HeroTextContainer = styled.div`
 const LogoWrapper = styled.div`
     width: 100%;
     minWidth: 200px;
-    maxWidth: 575px;
+    width: 575px;
+    max-width: 575px;
     @media(max-width: 43em) {
         width: 400px;
         margin: auto;
@@ -69,7 +70,7 @@ const CTAs = styled.div`
         margin-right: 1rem;
 
         & > div {
-            width: 180px
+            width: 180px;
         }
     }
     @media(max-width: 43em) {

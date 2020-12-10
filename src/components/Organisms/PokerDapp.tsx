@@ -1,8 +1,5 @@
 import React from "react"
-import { graphql, Link, StaticQuery } from "gatsby"
 import Img from 'gatsby-image'
-import Navigation from "../Molecules/Navigation"
-import { css } from '@emotion/core'
 import styled from "@emotion/styled"
 
 const Container = styled.header`
@@ -17,14 +14,12 @@ const Content = styled.div`
     display: flex;
     flex-direction: row;
     flex-flow: row wrap;
-    width: 1500px;
     align-items: center;
     justify-content: center;
 `
 
 const ImageWrapper = styled.div`
     width: 100%;
-    max-width: 600px;
     border: 5px solid var(--color-neonGreen);
     box-sizing: border-box;
 `
