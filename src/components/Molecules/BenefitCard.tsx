@@ -1,5 +1,6 @@
 import React, { ReactElement } from "react"
 import styled from '@emotion/styled'
+import Img from "gatsby-image"
 
 type BenefitCardProps = {
     image: string,
@@ -44,7 +45,9 @@ const BenefitCardContainer = styled.div`
 
 const BenefitCard = ({ image, title, text }: BenefitCardProps): ReactElement => (
     <BenefitCardContainer>
-        <img src={image}></img>        
+        <div style={{height: '100%'}}>
+            <Img fixed={image}></Img>        
+        </div>
         <h2>{title}</h2>
         <p>{text}</p>
     </BenefitCardContainer>

@@ -89,30 +89,30 @@ export const query =  graphql`
         }
       }
     },
-    benefitSecure: file(relativePath: { eq: "benefit-secure.png" }) {
+    benefitSecure: file(relativePath: { eq: "benefit_secure220.png" }) {
       childImageSharp {
-        fixed(quality: 90, width: 300, height: 300) {
+        fixed(quality: 90, height: 220, width: 220) {
           ...GatsbyImageSharpFixed
         }
       }
     },    
-    benefitShortTime: file(relativePath: { eq: "benefit-short-wait-times.png" }) {
+    benefitShortTime: file(relativePath: { eq: "benefit_short_wait_times220.png" }) {
       childImageSharp {
-        fixed(quality: 90, width: 300, height: 300) {
+        fixed(quality: 90, height: 220, width: 220) {
           ...GatsbyImageSharpFixed
         }
       }
     },    
-    benefitRealTime: file(relativePath: { eq: "benefit-real-time-betting.png" }) {
+    benefitRealTime: file(relativePath: { eq: "benefit_real_time_betting220.png" }) {
       childImageSharp {
-        fixed(quality: 90, width: 300, height: 300) {
+        fixed(quality: 90, height: 220, width: 220) {
           ...GatsbyImageSharpFixed
         }
       }
     },    
-    benefitBtcTech: file(relativePath: { eq: "benefit-btc-tech.png" }) {
+    benefitBtcTech: file(relativePath: { eq: "benefit_btc_tech220.png" }) {
       childImageSharp {
-        fixed(quality: 90, width: 300, height: 300) {
+        fixed(quality: 90, height: 220, width: 220) {
           ...GatsbyImageSharpFixed
         }
       }
