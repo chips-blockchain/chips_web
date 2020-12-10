@@ -43,7 +43,7 @@ Whether you would like to contribute your time or funds reach out to us.
 Please feel free to join our Discord and reach out to NutellaLicka, sg777 and daria.`
 
 const Development = ({  }: DevelopmentProps) => (
-    <Container>
+    <Container id="development">
         <Content>
             <img style={{marginLeft: '-1rem', width: '500px'}} src={development}></img>
             <p style={{width: '700px'}}>{text}</p>

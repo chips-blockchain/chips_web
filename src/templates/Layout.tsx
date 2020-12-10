@@ -71,7 +71,7 @@ export default function Layout({ children }) {
         >
           {children}  
       </BackgroundImage>
-      <Footer>
+      <Footer id="joincommunity">
         <img style={{width: '800px'}} src={joincommunity}></img>      
         <SocialLinks>
           <SocialBox 
