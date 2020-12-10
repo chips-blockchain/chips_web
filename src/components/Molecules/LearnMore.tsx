@@ -3,11 +3,13 @@ import styled from '@emotion/styled'
 import down from "../../images/icon_down.svg"
 
 type LearnMoreProps = {
-    text: string
+    text: string,
+    goToClassName: string
 }
 
 const defaultProps = {
-    text: 'Learn more'
+    text: 'Learn more',
+    goToClassName: 'whatischips'
 }
 
 const Container = styled.div`
@@ -29,9 +31,9 @@ const Container = styled.div`
     }
 `
 
-const LearnMore = ({ text }: LearnMoreProps): ReactElement => (
+const LearnMore = ({ text, goToClassName }: LearnMoreProps): ReactElement => (
     <Container>
-        <a href="#">{text}</a>
+        <a href='#whatischips'>{text}</a>
         <img src={down}></img>
     </Container>
 )

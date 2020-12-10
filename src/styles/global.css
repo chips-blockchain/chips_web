@@ -3,6 +3,7 @@ html, body {
     margin: 0;
     font-family: var(--font--family-primary);
     background-color: var(--color-darkPurple);
+    scroll-behavior: smooth;
 }
 
 p, h1, h2, h3 {

@@ -42,7 +42,7 @@ const BenefitsSection = styled.div`
 
 export default function About({ header, benefits}) {
   return (
-      <AboutSection>
+      <AboutSection id="whatischips">
           <img style={{width: `100%`, maxWidth: `700px`}} src={header}></img>
           <Description>
             <ChipsLink href="#">CHIPS</ChipsLink> is a cryptocurrency used to play poker games <br/> 
