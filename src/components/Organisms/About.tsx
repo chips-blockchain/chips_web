@@ -53,10 +53,10 @@ const BenefitsSection = styled.div`
       justify-content: center;
       width: 400px;
       height: 470px;
-      &:nth-child(1), &:nth-child(2) {
+      &:nth-of-type(1), &:nth-of-type(2) {
         border-bottom:  1px solid var(--color-lightPurple);
       }
-      &:nth-child(2) {
+      &:nth-of-type(2) {
         border-right: none;
       }
     }

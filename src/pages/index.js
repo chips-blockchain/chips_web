@@ -16,6 +16,7 @@ import pangeaDappHeader from "../images/text_pangeapokerdapp.svg"
 import whatischips from "../images/text_whatischips.svg"
 import whychips from "../images/text_whychips.svg"
 import Development from "../components/Organisms/Development"
+import { cards } from "../data/cardsData"
 
 export default function Home({data}) {
   return (
@@ -41,6 +42,7 @@ export default function Home({data}) {
           />
         <Why 
           header={whychips} 
+          cards={cards}
           />
           <PokerDapp
             header={pangeaDappHeader}

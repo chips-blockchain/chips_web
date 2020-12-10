@@ -27,14 +27,12 @@ const defaultProps = {
 const ArticleContainer = styled.div`
     display: flex;
     flex-direction: row;
-    flex-flow: row wrap;
 
     margin: 2rem;
-    height: 450px;
+    height: 400px;
     width: 970px;
 
-    padding-left: 3rem;
-    padding-right: 0rem;
+    padding: 0 1rem 0 2rem;
 
     background-color: var(--color-veryDarkPurple);
     border-radius: 5px;
@@ -44,16 +42,15 @@ const ArticleContainer = styled.div`
         color: var(--color-almostWhite);
     }
 
-    h1 {
+    h2 {
         text-transform: uppercase;
     }
 
+    border: 1px solid var(--color-lightPurple);
     p {
         font-size: var(--font-size-p);
         font-family: var(--font--family-secondary);
-        line-height: 140%;
-        max-width: 430px;
-        min-width: 200px;
+        line-height: 130%;
         margin-bottom: 2rem;
     }
 `
@@ -62,8 +59,8 @@ const CardContent = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-right: ${p => p.orientation ? '2rem' : '1rem'};
+    padding-left: ${p => !p.orientation ? '2rem' : '2rem'};
 `
 
 const ArticleCard = ({ orientation, title, text, theme, themeImage }: ArticleCardProps): ReactElement => (
@@ -86,14 +83,14 @@ const ArticleCard = ({ orientation, title, text, theme, themeImage }: ArticleCar
             {orientation &&
                 <ThreeWayAnimation themeImage={themeImage}></ThreeWayAnimation>
             }
-            <CardContent>
-                <h1>{title}</h1>
+            <CardContent orientation={orientation}>
+                <h2>{title}</h2>
                 <Img fixed={data.del.childImageSharp.fixed}></Img>
                 <p>{text}</p>
                 <Button theme={theme}></Button>
             </CardContent>
             {!orientation &&
-                <ThreeWayAnimation></ThreeWayAnimation>
+                <ThreeWayAnimation themeImage={themeImage}></ThreeWayAnimation>
             }
         </ArticleContainer>
         )}
