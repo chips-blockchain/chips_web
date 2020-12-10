@@ -45,7 +45,7 @@ const BenefitsSection = styled.div`
 
   // Border settings to move from vertical to a cross
   & > div {
-    
+
     border-right: 1px solid var(--color-lightPurple);
     @media(max-width: ${breakpoints.extra}) {
 
@@ -61,8 +61,18 @@ const BenefitsSection = styled.div`
       }
     }
     @media(max-width: ${breakpoints.tablet}) {
-      width: 300px;
-      height: 510px;
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-bottom: 1px solid var(--color-lightPurple);
+
+      & > h2 {
+        font-size: var(--font-size-h1);
+
+      }
+      & > p {
+        font-size: var(--font-size-h4);
+      }
     }
   } 
 
