@@ -44,14 +44,15 @@ const ArticleContainer = styled.div`
 
     h2 {
         text-transform: uppercase;
+        font-weight: 400;
     }
 
-    border: 1px solid var(--color-lightPurple);
     p {
         font-size: var(--font-size-p);
         font-family: var(--font--family-secondary);
         line-height: 130%;
         margin-bottom: 2rem;
+        opacity: 0.9;
     }
 `
 

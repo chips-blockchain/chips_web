@@ -40,6 +40,7 @@ const BenefitCardContainer = styled.div`
         font-family: var(--font--family-secondary);
         line-height: 130%;
         height: 100%;
+        opacity: 0.9;
     }
 `
 
