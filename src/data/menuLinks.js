@@ -1,22 +1,22 @@
 export const menuLinks = [
     {
-      link: '#',
+      link: '#whatischips',
       name: 'About'
     },
     {
-      link: '#',
+      link: '#development',
       name: 'Development'
     },
     {
-      link: '#',
+      link: '#joincommunity',
       name: 'Community'
     },
     {
-      link: '#',
+      link: '/blog',
       name: 'Articles'
     },
     {
-      link: '#',
+      link: 'http://docs.chips.cash/en/latest/faq.html',
       name: 'FAQ'
     }            
   ]
