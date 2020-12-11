@@ -1,6 +1,7 @@
 import React from "react"
 import Img from 'gatsby-image'
 import styled from "@emotion/styled"
+import ImageWithText from "../Molecules/ImageWithText"
 
 const Container = styled.header`
     display: flex;
@@ -9,70 +10,42 @@ const Container = styled.header`
     justify-content: center;
     margin-top: 10rem;
 `
-
-const Content = styled.div`
-    display: flex;
-    flex-direction: row;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: center;
-`
-
-const ImageWrapper = styled.div`
-    width: 100%;
-    border: 5px solid var(--color-neonGreen);
-    box-sizing: border-box;
-`
-
 const HeaderImageWrapper = styled.div`
     width: 100%;
     max-width: 700px;
     margin-bottom: 3rem;
 `
 
-const Text = styled.div`
-    width: 500px;
-    padding-right: 4rem;
-
-    p {
-        font-size: var(--font-size-h4);
-    }
-    h1 {
-        margin-top: 2rem;
-        margin-bottom: 0.5rem;
-        color: var(--color-neonPink);
-    }
-`
-
-const BigTitle = styled.h1`
-    font-size: 60px;
-    text-transform: uppercase;
-    color: var(--color-neonBlue);
-    font-weight: bold;
-    font-family: var(--font--family-primary);
-    margin-top: 10rem;
-    margin-bottom: 5rem;
-`
-
-export default function PokerDapp({ header, pokerdapp, dealerPlayer }) {
+export default function PokerDapp({ header, pokerdapp, deposit, preflop, ui }) {
   return (
       <Container>
         <HeaderImageWrapper>
             <img src={header}></img>
         </HeaderImageWrapper>
-        <Content>
-            <Text>
-                <h1>FIRST OF ITS KIND</h1>
-                <p>Pangea Poker is a truly decentralized, peer-to-peer gaming technology.  It is the result of complex mathematics & software development with cryptocurrency implementation.  The purpose is to build a new form of online poker experience which  is trustless, secure, and immutable.  CHIPS & Pangea Poker carry Bitcoin’s principles forward into a new dimension of online gaming.</p>
-                <h1>SECURE DECK SHUFFLING</h1>
-                <p>Pangea poker is an advanced application that solves the problems of trustless poker. It uses a p2p cyrptographic function for deck shuffling and allocation, plus CHIPS technology, to create a real-time betting platform that is tamper-proof.  Coupled with Komodo’s dPOW security mechanism, you can play safe knowing each hand cannot be altered, undone, or tampered with.</p>
-            </Text>
-            <ImageWrapper>
-                <Img fluid={pokerdapp}></Img>
-            </ImageWrapper>
-        </Content>
-        {/* <BigTitle>Are you a dealer or a player?</BigTitle> */}
-        <img style={{maxWidth: '900px', marginTop: '10rem'}} src={dealerPlayer}></img>
+        <ImageWithText 
+            image={preflop}
+            title={'FIRST OF ITS KIND'}
+            subtitle={'Pangea Poker is a truly decentralized, peer-to-peer gaming technology.'}
+            text={'It is the result of complex mathematics & software development with cryptocurrency implementation.  The purpose is to build a new form of online poker experience which  is trustless, secure, and immutable.  CHIPS & Pangea Poker carry Bitcoin’s principles forward into a new dimension of online gaming.'}
+        />
+        <ImageWithText 
+            image={pokerdapp}
+            title={'SECURE DECK SHUFFLING'}
+            subtitle={'Pangea poker uses a p2p cyrptographic function for deck shuffling and allocation, plus CHIPS technology, to create a real-time betting platform that is tamper-proof.'}
+            text={'Pangea poker is an advanced application that solves the problems of trustless poker. Coupled with Komodo’s dPOW security mechanism, you can play safe knowing each hand cannot be altered, undone, or tampered with.'}
+        />     
+        <ImageWithText 
+            image={deposit}
+            title={'PLAY USING CHIPS'}
+            subtitle={'Pangea uses CHIPS to play the poker games.'}
+            text={'CHIPS enables decentralised, peer-to-peer, trustless, on-the-blockchain, casino style games. You can deposit and withdraw CHIPS to/from your game wallet. Transactions come through within a couple of minutes. You can always see your current balance in the Cashier. '}
+        />  
+        <ImageWithText 
+            image={ui}
+            title={'Beautiful UI'}
+            subtitle={'Pangea Poker GUI offers easy to use and eye pleasing user experience.'}
+            text={'We take a lot of pride in our GUI design which was crafted with love by @pixelshove and is continuously getting love from @daria now. We are planning to integrate many more different themes for the game, from classical to futuristic.'}
+        />                     
       </Container>
     )
 }

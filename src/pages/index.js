@@ -47,7 +47,9 @@ export default function Home({data}) {
           <PokerDapp
             header={pangeaDappHeader}
             pokerdapp={data.pokerdapp.childImageSharp.fluid}
-            dealerPlayer={dealerPlayer}
+            deposit={data.deposit.childImageSharp.fluid}
+            preflop={data.preflop.childImageSharp.fluid}
+            ui={data.ui.childImageSharp.fluid}
           />
           <Development></Development>
      </Layout>
@@ -121,7 +123,28 @@ export const query =  graphql`
     },
     pokerdapp: file(relativePath: { eq: "pokerdapp.jpg" }) {
       childImageSharp {
-        fluid(quality: 90,  maxWidth: 300) {
+        fluid(quality: 90,  maxWidth: 600) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    },
+    deposit: file(relativePath: { eq: "deposit.png" }) {
+      childImageSharp {
+        fluid(quality: 90,  maxWidth: 600) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    },    
+    preflop: file(relativePath: { eq: "pre_flop.png" }) {
+      childImageSharp {
+        fluid(quality: 90,  maxWidth: 600) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    },
+    ui: file(relativePath: { eq: "ui.png" }) {
+      childImageSharp {
+        fluid(quality: 90,  maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
