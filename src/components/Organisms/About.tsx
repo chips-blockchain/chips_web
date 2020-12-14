@@ -32,7 +32,6 @@ const BenefitsSection = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  flex-flow: row wrap;
   margin-top: 4rem;
   background-color: var(--color-veryDarkPurple);
   opacity: 1;
@@ -61,6 +60,14 @@ const BenefitsSection = styled.div`
       }
     }
     @media(max-width: ${breakpoints.tablet}) {
+      width: 350px;
+      height: 510px;
+    }    
+    @media(max-width: 52rem) {
+      width: 280px;
+      height: 510px;
+    }        
+    @media(max-width: ${breakpoints.mobile}) {
       width: 100%;
       height: 100%;
       border: none;
