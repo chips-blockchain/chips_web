@@ -16,6 +16,13 @@ const WhySection=styled.div`
         width: 100%;
     }
 `
+const ImageWrapper = styled.div`
+  width: 500px;
+  margin: auto;
+  @media(max-width: ${breakpoints.mobile}) {
+    width: 100%;
+}
+`
 
 type ArticleCard = {
     title: string,
@@ -36,7 +43,9 @@ const defaultProps = {
 const Why = ({ cards, header }: WhyProps) => {
   return (
         <WhySection>
-            <img style={{width: `500px`, margin: 'auto'}} src={header}></img>
+            <ImageWrapper>
+              <img src={header}></img>
+            </ImageWrapper>
             {cards.map((card, key) => (
               <ArticleCard
                 title={card.title}

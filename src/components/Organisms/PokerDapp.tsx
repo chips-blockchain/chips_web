@@ -23,7 +23,7 @@ const HeaderImageWrapper = styled.div`
         width: 500px;
     }    
     @media(max-width: ${breakpoints.mobile}) {
-        width: 350px;
+        width: 100%;
     }
 `
 
