@@ -2,6 +2,7 @@ import React from "react"
 import Img from 'gatsby-image'
 import styled from "@emotion/styled"
 import ImageWithText from "../Molecules/ImageWithText"
+import breakpoints from "../../styles/breakpoints"
 
 const Container = styled.header`
     display: flex;
@@ -14,6 +15,12 @@ const HeaderImageWrapper = styled.div`
     width: 100%;
     max-width: 700px;
     margin-bottom: 3rem;
+    @media(max-width: ${breakpoints.tablet}) {
+        width: 500px;
+    }    
+    @media(max-width: ${breakpoints.mobile}) {
+        width: 350px;
+    }
 `
 
 export default function PokerDapp({ header, pokerdapp, deposit, preflop, ui }) {

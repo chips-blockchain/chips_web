@@ -10,6 +10,7 @@ const Container = styled.div`
     margin-top: 2rem;
     @media(max-width: ${breakpoints.tablet}) {
         flex-direction: column;
+        margin: 0;
     }
 `
 
@@ -17,11 +18,19 @@ const ImageWrapper = styled.div`
     width: 600px;
     border: 5px solid var(--color-neonGreen);
     box-sizing: border-box;
+    
+    @media(max-width: ${breakpoints.tablet}) {
+        width: 500px;
+    }
+
+    @media(max-width: ${breakpoints.mobile}) {
+        width: 350px;
+    }
 `
 
 const Text = styled.div`
     border-left: 1px solid white;
-    width: 500px;
+    width: 400px;
     height: 100%;
     padding:0 1rem;
     margin-left: 2rem;
@@ -43,9 +52,13 @@ const Text = styled.div`
     }
 
     @media(max-width: ${breakpoints.tablet}) {
+        width: 500px;
         margin-left: 0;
         margin-top: 2rem;
-        margin-bottom: 2rem;
+        margin-bottom: 4rem;
+    }
+    @media(max-width: ${breakpoints.mobile}) {
+        width: 350px;
     }
 `
 
