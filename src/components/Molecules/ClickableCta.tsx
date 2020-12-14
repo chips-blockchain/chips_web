@@ -24,7 +24,7 @@ const Container = styled.div`
         font-weight: bold;
 
         &:hover {
-            color: var(--color-neonGreen);
+            background-color: var(--color-neonPink);
             text-decoration: underline;
         }
     }
