@@ -2,6 +2,7 @@ import React, { ReactElement } from "react"
 import styled from '@emotion/styled'
 import ClickableIcon from "../Atoms/ClickableIcon"
 import githubIcon from "../../images/icon_github.svg"
+import breakpoints from "../../styles/breakpoints"
 
 type RepositoryProps = {
     repositoryLink: string,
@@ -40,6 +41,12 @@ const RepoName = styled.a`
             text-decoration: underline;
         }
     }
+    @media(max-width: ${breakpoints.mobile}) {
+        & > h2 {
+            color: var(--color-neonGreen);
+            text-decoration: underline;
+        }
+    }    
 `
 const ExtraInfo = styled.p`
     color: var(--color-gray);

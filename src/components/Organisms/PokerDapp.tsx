@@ -11,6 +11,9 @@ const Container = styled.header`
     justify-content: center;
     margin-top: 10rem;
     padding-bottom: 5rem;
+    @media(max-width: ${breakpoints.mobile}) {
+        padding-bottom: 0;
+    }
 `
 const HeaderImageWrapper = styled.div`
     width: 100%;

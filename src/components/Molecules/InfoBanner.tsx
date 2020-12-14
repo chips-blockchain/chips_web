@@ -1,5 +1,6 @@
 import React, { ReactElement } from "react"
 import styled from '@emotion/styled'
+import breakpoints from "../../styles/breakpoints"
 
 type InfoBannerProps = {
     title: string,
@@ -24,6 +25,9 @@ const Container = styled.div`
     p {
         font-family: var(--font--family-secondary);
         font-size: var(--font-size-h4);
+    }
+    @media(max-width: ${breakpoints.mobile}) {
+        width: 390px;
     }
 `
 

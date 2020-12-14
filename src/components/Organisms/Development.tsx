@@ -4,6 +4,7 @@ import Repository from "../Molecules/Repository"
 import development from "../../images/text_development.svg"
 import InfoBanner from "../Molecules/InfoBanner"
 import brickbg from "../../images/bg_dev.svg"
+import breakpoints from "../../styles/breakpoints"
 
 type DevelopmentProps = {
 }
@@ -30,6 +31,11 @@ const Repositories=styled.div`
     }
     margin-right: 1.5rem;
     margin-left: 1.5rem;
+    @media(max-width: ${breakpoints.mobile}) {
+        &:nth-of-type(2) {
+            margin-left: 5.5rem;
+        }
+    }
 `
 const Content = styled.div`
     display: flex;
@@ -39,6 +45,10 @@ const Content = styled.div`
     margin-top: 3rem;
     justify-content: space-between;
     width: 700px;
+    @media(max-width: ${breakpoints.mobile}) {
+        flex-direction: column;
+        width: 390px;
+    }
 `
 
 const AlphaNote = styled.div`
@@ -46,11 +56,23 @@ const AlphaNote = styled.div`
     color: #C5AFFF;
     width: 700px;
     margin: 3rem 0 2rem 0;
+    @media(max-width: ${breakpoints.mobile}) {
+        width: 390px;
+        padding-left: 1rem;
+    }
+`
+const ImageWrapper = styled.div`
+    width: 700px;
+    @media(max-width: ${breakpoints.mobile}) {
+        width: 400px;
+    }
 `
 
 const Development = ({  }: DevelopmentProps) => (
     <Container id="development">
-            <img style={{marginLeft: '-1rem', width: '700px'}} src={development}></img>
+            <ImageWrapper>
+                <img src={development}></img>
+            </ImageWrapper>
             <Content>
                 <Repositories>
                     <Repository title={"MANUAL INSTALLATION"}  extraInfo={"for tech savvy"}></Repository>
