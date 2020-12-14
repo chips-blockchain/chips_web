@@ -21,7 +21,6 @@ const Container = styled.div`
     justify-items: center;
     align-items: center;
     padding: 1rem;
-    
 `
 
 const ThreeWayAnimation = ({ themeImage }: ThreeWayAnimationProps): ReactElement => {
@@ -32,63 +31,63 @@ const ThreeWayAnimation = ({ themeImage }: ThreeWayAnimationProps): ReactElement
                 query {
                     coinPart1: file(relativePath: { eq: "card_chips_chip.png" }) {
                         childImageSharp {
-                            fixed(quality: 90, height: 250, width: 350) {
+                            fixed(quality: 90, height: 200, width: 300) {
                             ...GatsbyImageSharpFixed
                             }
                         }
                     },
                     coinPart2: file(relativePath: { eq: "card_chips_dice.png" }) {
                         childImageSharp {
-                            fixed(quality: 90, height: 250, width: 350) {
+                            fixed(quality: 90, height: 250, width: 300) {
                             ...GatsbyImageSharpFixed
                             }
                         }
                     },
                     coinPart3: file(relativePath: { eq: "card_chips_gold.png" }) {
                         childImageSharp {
-                            fixed(quality: 90, height: 250, width: 350) {
+                            fixed(quality: 90, height: 200, width: 300) {
                             ...GatsbyImageSharpFixed
                             }
                         }
                     },
                     cardsPart1: file(relativePath: { eq: "card_rel_card.png" }) {
                         childImageSharp {
-                            fixed(quality: 90, height: 250, width: 350) {
+                            fixed(quality: 90, height: 200, width: 300) {
                             ...GatsbyImageSharpFixed
                             }
                         }
                     },
                     cardsPart2: file(relativePath: { eq: "card_rel_chips.png" }) {
                         childImageSharp {
-                            fixed(quality: 90, height: 250, width: 350) {
+                            fixed(quality: 90, height: 250, width: 300) {
                             ...GatsbyImageSharpFixed
                             }
                         }
                     },
                     cardsPart3: file(relativePath: { eq: "card_rel_dice.png" }) {
                         childImageSharp {
-                            fixed(quality: 90, height: 250, width: 350) {
+                            fixed(quality: 90, height: 250, width: 300) {
                             ...GatsbyImageSharpFixed
                             }
                         }
                     },
                     machinePart1: file(relativePath: { eq: "card_safe_body.png" }) {
                         childImageSharp {
-                            fixed(quality: 90, height: 250) {
+                            fixed(quality: 90, height: 220) {
                             ...GatsbyImageSharpFixed
                             }
                         }
                     },
                     machinePart2: file(relativePath: { eq: "card_safe_coins.png" }) {
                         childImageSharp {
-                            fixed(quality: 90, height: 250) {
+                            fixed(quality: 90, height: 220) {
                             ...GatsbyImageSharpFixed
                             }
                         }
                     },
                     machinePart3: file(relativePath: { eq: "card_safe_glow.png" }) {
                         childImageSharp {
-                            fixed(quality: 90, height: 250) {
+                            fixed(quality: 90, height: 220) {
                             ...GatsbyImageSharpFixed
                             }
                         }
