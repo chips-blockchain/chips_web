@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
 import ArticleCard from "../Molecules/ArticleCard"
+import breakpoints from "../../styles/breakpoints"
 
 const WhySection=styled.div`
     display: flex;
@@ -8,6 +9,12 @@ const WhySection=styled.div`
     justify-content: center;
     align-items: center;
     margin-top: 10rem;
+
+    @media(max-width: ${breakpoints.mobile}) {
+        align-items: normal;
+        justify-content: space-between;
+        width: 100%;
+    }
 `
 
 type ArticleCard = {
@@ -29,7 +36,7 @@ const defaultProps = {
 const Why = ({ cards, header }: WhyProps) => {
   return (
         <WhySection>
-            <img style={{width: `500px`}} src={header}></img>
+            <img style={{width: `500px`, margin: 'auto'}} src={header}></img>
             {cards.map((card, key) => (
               <ArticleCard
                 title={card.title}
