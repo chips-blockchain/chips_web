@@ -4,11 +4,8 @@ import HeroText from "../Atoms/HeroText"
 import Img, { FixedObject, FluidObject } from 'gatsby-image'
 import styled from '@emotion/styled'
 import { sampleBase64 } from "../../utils/sampleBase64"
-import ClickableIcon from "../Atoms/ClickableIcon"
 import github from "../../images/icon_github.svg"
 import discord from "../../images/icon_discord.svg"
-import down from "../../images/icon_down.svg"
-import OutlineButton from "../Atoms/OutlineButton"
 import ClickableCta from "../Molecules/ClickableCta"
 import LearnMore from "../Molecules/LearnMore"
 

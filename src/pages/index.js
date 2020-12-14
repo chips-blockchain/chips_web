@@ -51,7 +51,7 @@ export default function Home({data}) {
             preflop={data.preflop.childImageSharp.fluid}
             ui={data.ui.childImageSharp.fluid}
           />
-          <Development></Development>
+          <Development />
      </Layout>
   )
 }
