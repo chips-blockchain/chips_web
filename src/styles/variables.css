@@ -1,10 +1,12 @@
 :root {
     /* Colors */
     --color-almostWhite: #F1F1F1;
+    --color-gray: #BFBFBF;
     --color-neonBlue: #8BCBFF;
     --color-neonPink: #E16AE3;
     --color-neonGreen: #9FD39E;
     --color-lightPurple: #45307E;
+    --color-purple: #C5AFFF;
     --color-darkPurple: #240D68;
     --color-veryDarkPurple: #19074F;
 

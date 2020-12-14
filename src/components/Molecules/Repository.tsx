@@ -12,55 +12,48 @@ type RepositoryProps = {
 const defaultProps = {
     repositoryLink: "https://github.com/chips-blockchain/",
     title: "Lorem Ipsum",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lacus vel facilisis volutpat est velit. Lobortis sceler."
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lacus vel facilisis volutpat est velit. Lobortis sceler.",
+    icon: true
 }
 
 const Container = styled.div`
     display: flex;
-    flex-direction: column;
-    margin-top: 5rem;
-    margin-right: 5rem;
-    & > p, h1 {
-    }
-
-    & > p {
-        width: 400px;
-        font-size: var(--font-size-p);
-        font-family: var(--font--family-secondary);
-    }
-
-`
-const TitleWrapper = styled.div`
-    display: flex;
     flex-direction: row;
-
-    & > a {
-        padding: 0;
-        padding-right: 1rem;
+    align-items: left;
+    & > h2 {
+        text-transform: uppercase;
     }
-    & > h1 {
+`
+const RepoName = styled.a`
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    & > p {
         margin: 0;
     }
+    & > h2 {
+        margin-bottom: 0;
+    }
+    &:hover {
+        & > h2 {
+            color: var(--color-neonGreen);
+            text-decoration: underline;
+        }
+    }
 `
-
 const ExtraInfo = styled.p`
-    color: var(--color-neonBlue)
+    color: var(--color-gray);
+    margin-left: 1rem;
+    font-style: italic;
 `
 
-let text = `Bet is the implementation of the Pangea protocol which nees LN and CHIPS. The installation of LN and CHIPS must be done before proceeding to play with bet. The initial draft of the game written by jl777 is here.
-
-If you would like to learn more please refer to the Pangea Protocol Whitepaper`
-
-const Repository = ({ repositoryLink, title, extraInfo }: RepositoryProps): ReactElement => (
+const Repository = ({ repositoryLink, title, extraInfo, icon }: RepositoryProps): ReactElement => (
     <Container>
-        <TitleWrapper>
-            <ClickableIcon icon={githubIcon} link={repositoryLink}></ClickableIcon>
-            <h1>{title}</h1>
-        </TitleWrapper>
-        
-        <p>{text}</p>
-        <ExtraInfo>{extraInfo}</ExtraInfo>
-       
+        {icon && <ClickableIcon icon={githubIcon} link={repositoryLink}></ClickableIcon>}
+        <RepoName href="repositoryLink">
+            <h2>{title}</h2>        
+            <ExtraInfo>{extraInfo}</ExtraInfo>
+        </RepoName>
     </Container>
 )
 

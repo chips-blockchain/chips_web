@@ -8,7 +8,7 @@ type ClickableIconProps = {
 }
 
 const defaultProps = {
-    link: "/",
+    link: "https://link.com",
     icon: github
 }
 

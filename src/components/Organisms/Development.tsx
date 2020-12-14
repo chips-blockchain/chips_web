@@ -17,44 +17,56 @@ const Container=styled.div`
     align-items: center;
     justify-content: center;
     margin-top: 5rem;
-    padding: 10rem 10rem;
+    padding: 7rem 10rem;
     background-image: url(${brickbg});
     background-size: cover; 
     background-repear: no-repeat;
 `
-const Content=styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-
-    & > p {
-        font-size: var(--font-size-h3);
-        font-family: var(--font--family-secondary);
-    }
-`
 const Repositories=styled.div`
     display: flex;
-    flex-flow: row wrap;
-    width: 1000px;
+    flex-direction: column;
+    & > h1 {
+        color: var(--color-neonBlue);
+    }
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
+`
+const Content = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    justify-content: center;
+    margin-top: 3rem;
+    justify-content: space-between;
+    width: 700px;
 `
 
-let text = `We are an open source project and we are always looking for contributors. 
-Whether you would like to contribute your time or funds reach out to us.
-Please feel free to join our Discord and reach out to NutellaLicka, sg777 and daria.`
+const AlphaNote = styled.div`
+    text-transform: uppercase;
+    color: #C5AFFF;
+    width: 700px;
+    margin: 3rem 0 2rem 0;
+`
 
 const Development = ({  }: DevelopmentProps) => (
     <Container id="development">
-        <Content>
-            <img style={{marginLeft: '-1rem', width: '500px'}} src={development}></img>
-            <p style={{width: '700px'}}>{text}</p>
-            <Repositories>
-                <Repository></Repository>
-                <Repository extraInfo={"The official alpha version has not been released yet. For more information on project updates please follow announcements in Discord and Twitter."}></Repository>
-                <Repository></Repository>
-                <Repository></Repository>
-            </Repositories>
+            <img style={{marginLeft: '-1rem', width: '700px'}} src={development}></img>
+            <Content>
+                <Repositories>
+                    <Repository title={"MANUAL INSTALLATION"}  extraInfo={"for tech savvy"}></Repository>
+                    <Repository title={"PRE ALPHA TUTORIAL"} extraInfo={"for extra curious"}></Repository>
+                    <Repository title={"BET"} extraInfo={"backend repository in C"}></Repository>
+                    <Repository title={"POKER GUI"} extraInfo={"React based GUI"}></Repository>
+                    <Repository title={"DOCKER"} extraInfo={"Dockerized backend for the project"}></Repository>
+                </Repositories>
+                <Repositories>
+                    <Repository icon={false} title={"PANGEA WHITE PAPER"} extraInfo={"Co-written by jl777 and sg777"}></Repository>
+                    <Repository icon={false} title={"CHIPS FAQ"} extraInfo={"All you want to know"}></Repository>
+                    <Repository icon={false} title={"DISCORD"}  extraInfo={"Join join join us!"}></Repository>
+                </Repositories> 
+            </Content>       
+            <AlphaNote>The official alpha version has not been released yet. For more information on the project updates please follow our announcements in Discord and Twitter.</AlphaNote>    
             <InfoBanner></InfoBanner>
-        </Content>
     </Container>
 )
 

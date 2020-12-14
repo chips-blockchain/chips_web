@@ -10,6 +10,7 @@ const Container = styled.header`
     align-items: center;
     justify-content: center;
     margin-top: 10rem;
+    padding-bottom: 5rem;
 `
 const HeaderImageWrapper = styled.div`
     width: 100%;
