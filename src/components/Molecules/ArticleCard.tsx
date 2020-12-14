@@ -63,9 +63,8 @@ const ArticleContainer = styled.div`
     }
 
     @media(max-width: ${breakpoints.tablet2}) {
-        width: 600px;
+        width: 650px;
         padding: 1rem 1rem 1rem 2rem;
-        flex-direction: column;
     }
 
     @media(max-width: ${breakpoints.mobile}) {
@@ -91,11 +90,6 @@ const Wrapper = styled.div`
 `
 
 const ArticleCard = ({ orientation, title, text, theme, themeImage }: ArticleCardProps): ReactElement => {
-    // 52 rem - 16 * 82 = 830
-    if (window.innerWidth < 830) {
-        orientation = true;
-    }
-
     return (         
         <div>
             <ArticleContainer >
