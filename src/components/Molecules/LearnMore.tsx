@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react"
 import styled from '@emotion/styled'
-import down from "../../images/icon_down.svg"
+import down from "../../images/icons/icon_down.svg"
 
 type LearnMoreProps = {
     text: string,

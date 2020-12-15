@@ -1,7 +1,7 @@
 import React, { ReactElement } from "react"
 import styled from '@emotion/styled'
 import ClickableIcon from "../Atoms/ClickableIcon"
-import githubIcon from "../../images/icon_github.svg"
+import githubIcon from "../../images/icons/icon_github.svg"
 import breakpoints from "../../styles/breakpoints"
 
 type RepositoryProps = {

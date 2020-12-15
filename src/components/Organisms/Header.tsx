@@ -2,6 +2,7 @@ import React from "react"
 import {Link } from "gatsby"
 import Navigation from "../Molecules/Navigation"
 import styled from "@emotion/styled"
+import Img from "gatsby-image"
 
 const StyledHeader = styled.header`
   display: flex;
@@ -32,7 +33,7 @@ export default function Header({ logoImage, menuLinks, navigationColor }) {
   return (
       <StyledHeader>
         <Link to="/">
-          <Logo src={logoImage}></Logo>
+          <Img fixed={logoImage}></Img>
         </Link>
        <Navigation
           menuLinks={menuLinks}

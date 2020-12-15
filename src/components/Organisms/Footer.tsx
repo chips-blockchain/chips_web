@@ -1,20 +1,18 @@
 import React from "react"
 import styled from "@emotion/styled"
-import brickbg from "../../images/brick_bg.svg"
 import SocialBox from "../Molecules/SocialBox"
-import joincommunity from "../../images/text_joincommunity.svg"
+import joincommunity from "../../images/text/text_joincommunity.svg"
 import socialneon from "../../images/bg_social_neon.svg"
 
-import github from "../../images/icon_github.svg"
-import discord from "../../images/icon_discord.svg"
-import mail from "../../images/icon_mail.svg"
-import file from "../../images/icon_file.svg"
-import twitter from "../../images/icon_twitter.svg"
-import btc from "../../images/icon_btc.svg"
+import github from "../../images/icons/icon_github.svg"
+import discord from "../../images/icons/icon_discord.svg"
+import mail from "../../images/icons/icon_mail.svg"
+import file from "../../images/icons/icon_file.svg"
+import twitter from "../../images/icons/icon_twitter.svg"
+import btc from "../../images/icons/icon_btc.svg"
 import breakpoints from "../../styles/breakpoints"
 
 const StyledFooter = styled.footer`
-  background-image: url(${brickbg});
   background-size: cover; 
   background-repear: no-repeat;
   margin: 0;
@@ -61,7 +59,7 @@ const ImageWrapper = styled.div`
   }
 `
 
-const Footer = ({ logoImage, menuLinks, navigationColor }) => {
+const Footer = ({ }) => {
   return (
        <StyledFooter id="joincommunity">
          <ImageWrapper>

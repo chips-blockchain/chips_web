@@ -15,7 +15,14 @@ export default function Layout({ children }) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
-        }
+        },
+        brickBg: file(relativePath: { eq: "brick_bg.jpg" }) {
+          childImageSharp {
+            fluid(quality: 90) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }        
       }
     `)
 
@@ -27,7 +34,12 @@ export default function Layout({ children }) {
         >
           {children}  
       </BackgroundImage>
-    <Footer />
+      <BackgroundImage
+          Tag="footer"
+          fluid={data.brickBg.childImageSharp.fluid}
+        >
+        <Footer />
+      </BackgroundImage>
     </div>
   )
 }

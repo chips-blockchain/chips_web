@@ -29,63 +29,63 @@ const ThreeWayAnimation = ({ themeImage }: ThreeWayAnimationProps): ReactElement
         query={
             graphql`
                 query {
-                    coinPart1: file(relativePath: { eq: "card_chips_chip.png" }) {
+                    coinPart1: file(relativePath: { eq: "articleCards/card_chips_chip.png" }) {
                         childImageSharp {
                             fixed(quality: 90, height: 200, width: 300) {
                             ...GatsbyImageSharpFixed
                             }
                         }
                     },
-                    coinPart2: file(relativePath: { eq: "card_chips_dice.png" }) {
+                    coinPart2: file(relativePath: { eq: "articleCards/card_chips_dice.png" }) {
                         childImageSharp {
                             fixed(quality: 90, height: 250, width: 300) {
                             ...GatsbyImageSharpFixed
                             }
                         }
                     },
-                    coinPart3: file(relativePath: { eq: "card_chips_gold.png" }) {
+                    coinPart3: file(relativePath: { eq: "articleCards/card_chips_gold.png" }) {
                         childImageSharp {
                             fixed(quality: 90, height: 200, width: 300) {
                             ...GatsbyImageSharpFixed
                             }
                         }
                     },
-                    cardsPart1: file(relativePath: { eq: "card_rel_card.png" }) {
+                    cardsPart1: file(relativePath: { eq: "articleCards/card_rel_card.png" }) {
                         childImageSharp {
                             fixed(quality: 90, height: 200, width: 300) {
                             ...GatsbyImageSharpFixed
                             }
                         }
                     },
-                    cardsPart2: file(relativePath: { eq: "card_rel_chips.png" }) {
+                    cardsPart2: file(relativePath: { eq: "articleCards/card_rel_chips.png" }) {
                         childImageSharp {
                             fixed(quality: 90, height: 250, width: 300) {
                             ...GatsbyImageSharpFixed
                             }
                         }
                     },
-                    cardsPart3: file(relativePath: { eq: "card_rel_dice.png" }) {
+                    cardsPart3: file(relativePath: { eq: "articleCards/card_rel_dice.png" }) {
                         childImageSharp {
                             fixed(quality: 90, height: 250, width: 300) {
                             ...GatsbyImageSharpFixed
                             }
                         }
                     },
-                    machinePart1: file(relativePath: { eq: "card_safe_body.png" }) {
+                    machinePart1: file(relativePath: { eq: "articleCards/card_safe_body.png" }) {
                         childImageSharp {
                             fixed(quality: 90, height: 220) {
                             ...GatsbyImageSharpFixed
                             }
                         }
                     },
-                    machinePart2: file(relativePath: { eq: "card_safe_coins.png" }) {
+                    machinePart2: file(relativePath: { eq: "articleCards/card_safe_coins.png" }) {
                         childImageSharp {
                             fixed(quality: 90, height: 220) {
                             ...GatsbyImageSharpFixed
                             }
                         }
                     },
-                    machinePart3: file(relativePath: { eq: "card_safe_glow.png" }) {
+                    machinePart3: file(relativePath: { eq: "articleCards/card_safe_glow.png" }) {
                         childImageSharp {
                             fixed(quality: 90, height: 220) {
                             ...GatsbyImageSharpFixed

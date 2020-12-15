@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql } from 'gatsby'
-import logoText from "../images/chips_logo_text.svg"
 import BackgroundImage from "gatsby-background-image";
 
 import Layout from "../templates/Layout"
@@ -11,10 +10,9 @@ import Why from "../components/Organisms/Why"
 import PokerDapp from "../components/Organisms/PokerDapp"
 import { menuLinks } from "../data/menuLinks"
 import { getBenefitsData } from "../utils/dataHelper"
-import dealerPlayer from "../images/dealer-player.svg"
-import pangeaDappHeader from "../images/text_pangeapokerdapp.svg"
-import whatischips from "../images/text_whatischips.svg"
-import whychips from "../images/text_whychips.svg"
+import pangeaDappHeader from "../images/text/text_pangeapokerdapp.svg"
+import whatischips from "../images/text/text_whatischips.svg"
+import whychips from "../images/text/text_whychips.svg"
 import Development from "../components/Organisms/Development"
 import { cards } from "../data/cardsData"
 
@@ -26,7 +24,7 @@ export default function Home({data}) {
           fluid={data.headerImage.childImageSharp.fluid}
           style={{minHeight: '100vh'}}>
           <Header 
-            logoImage={logoText}
+            logoImage={data.logoText.childImageSharp.fixed}
             menuLinks={menuLinks}
             navigationColor={'var(--color-almostWhite)'}
           />
@@ -93,28 +91,28 @@ export const query =  graphql`
         }
       }
     },
-    benefitSecure: file(relativePath: { eq: "benefit_secure220.png" }) {
+    benefitSecure: file(relativePath: { eq: "benefits/benefit_secure220.png" }) {
       childImageSharp {
         fixed(quality: 90, height: 220, width: 220) {
           ...GatsbyImageSharpFixed
         }
       }
     },    
-    benefitShortTime: file(relativePath: { eq: "benefit_short_wait_times220.png" }) {
+    benefitShortTime: file(relativePath: { eq: "benefits/benefit_short_wait_times220.png" }) {
       childImageSharp {
         fixed(quality: 90, height: 220, width: 220) {
           ...GatsbyImageSharpFixed
         }
       }
     },    
-    benefitRealTime: file(relativePath: { eq: "benefit_real_time_betting220.png" }) {
+    benefitRealTime: file(relativePath: { eq: "benefits/benefit_real_time_betting220.png" }) {
       childImageSharp {
         fixed(quality: 90, height: 220, width: 220) {
           ...GatsbyImageSharpFixed
         }
       }
     },    
-    benefitBtcTech: file(relativePath: { eq: "benefit_btc_tech220.png" }) {
+    benefitBtcTech: file(relativePath: { eq: "benefits/benefit_btc_tech220.png" }) {
       childImageSharp {
         fixed(quality: 90, height: 220, width: 220) {
           ...GatsbyImageSharpFixed
