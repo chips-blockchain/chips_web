@@ -1,7 +1,22 @@
-import React from "react"
-import Img from 'gatsby-image'
+import React, { ReactElement } from "react"
+import Img, { FluidObject } from 'gatsby-image'
 import styled from "@emotion/styled"
 import breakpoints from "../../styles/breakpoints"
+import { loremTitle, loremSubtitle, loremText } from "../../utils/lorem"
+
+export type ImageWithTextProps = {
+    image: FluidObject,
+    title: string,
+    subtitle: string,
+    text: string
+}
+
+const defaultProps = {
+    image: '',
+    title: loremTitle,
+    subtitle: loremSubtitle,
+    text: loremText
+}
 
 const Container = styled.div`
     display: flex;
@@ -62,7 +77,7 @@ const Text = styled.div`
     }
 `
 
-export default function ImageWithText({ title, subtitle, text, image }) {
+const ImageWithText = ({ title, subtitle, text, image }: ImageWithTextProps) : ReactElement => {
   return (
         <Container>
             <ImageWrapper>
@@ -76,3 +91,6 @@ export default function ImageWithText({ title, subtitle, text, image }) {
         </Container>   
     )
 }
+
+ImageWithText.defaultProps = defaultProps
+export default ImageWithText

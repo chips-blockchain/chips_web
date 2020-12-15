@@ -9,12 +9,14 @@ import About from "../components/Organisms/About"
 import Why from "../components/Organisms/Why"
 import PokerDapp from "../components/Organisms/PokerDapp"
 import { menuLinks } from "../data/menuLinks"
-import { getBenefitsData } from "../utils/dataHelper"
+import { getImageData } from "../utils/dataHelper"
 import pangeaDappHeader from "../images/text/text_pangeapokerdapp.svg"
 import whatischips from "../images/text/text_whatischips.svg"
 import whychips from "../images/text/text_whychips.svg"
 import Development from "../components/Organisms/Development"
 import { cards } from "../data/cardsData"
+import { benefitsData } from "../data/benefitsData"
+import { pokerDappData } from "../data/pokerDappData"
 
 export default function Home({data}) {
   return (
@@ -31,25 +33,21 @@ export default function Home({data}) {
           <Hero 
             title={'CHIPS revolutionises online gambling'}
             text={'The project aims to bring truly decentralized, trust-less, peer-to-peer, and secure, blockchain casino style games.'}
-            logoImg={data.logo.childImageSharp.fluid}
+            logoImage={data.logo.childImageSharp.fluid}
         />
         </BackgroundImage>
         <About 
           header={whatischips} 
-          benefits={getBenefitsData(data)}
+          benefits={getImageData(data, benefitsData)}
           />
         <Why 
           header={whychips} 
           cards={cards}
           />
-          <PokerDapp
-            header={pangeaDappHeader}
-            pokerdapp={data.pokerdapp.childImageSharp.fluid}
-            deposit={data.deposit.childImageSharp.fluid}
-            preflop={data.preflop.childImageSharp.fluid}
-            ui={data.ui.childImageSharp.fluid}
-          />
-          <Development />
+        <PokerDapp
+          data={getImageData(data, pokerDappData)}
+        />
+        <Development />
      </Layout>
   )
 }
