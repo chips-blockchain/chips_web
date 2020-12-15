@@ -16,8 +16,8 @@ const Container = styled.div`
     box-sizing: border-box;
     padding: 1rem 3rem;
     width: 700px;
-    background-image: url("../../images/table_bg.svg");
-
+    background-color: var(--color-darkPurple);
+    
     & > h2 {
         color: var(--color-neonBlue);
         text-transform: uppercase;
