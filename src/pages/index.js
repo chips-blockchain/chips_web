@@ -63,7 +63,7 @@ export const query =  graphql`
         }
       }
     },
-    headerImage: file(relativePath: { eq: "header_clean.png"}) {
+    headerImage: file(relativePath: { eq: "bg/header_clean.png"}) {
       childImageSharp {
           fluid(quality: 100, maxWidth: 1920) {
               ...GatsbyImageSharpFluid_withWebp
@@ -119,28 +119,28 @@ export const query =  graphql`
         }
       }
     },
-    pokerdapp: file(relativePath: { eq: "pokerdapp.jpg" }) {
+    pokerdapp: file(relativePath: { eq: "pokerdapp/pokerdapp.jpg" }) {
       childImageSharp {
         fluid(quality: 90,  maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     },
-    deposit: file(relativePath: { eq: "deposit.png" }) {
+    deposit: file(relativePath: { eq: "pokerdapp/deposit.png" }) {
       childImageSharp {
         fluid(quality: 90,  maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     },    
-    preflop: file(relativePath: { eq: "pre_flop.png" }) {
+    preflop: file(relativePath: { eq: "pokerdapp/pre_flop.png" }) {
       childImageSharp {
         fluid(quality: 90,  maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     },
-    ui: file(relativePath: { eq: "ui.png" }) {
+    ui: file(relativePath: { eq: "pokerdapp/ui.png" }) {
       childImageSharp {
         fluid(quality: 90,  maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp

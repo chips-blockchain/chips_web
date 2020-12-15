@@ -2,7 +2,7 @@ import React from "react"
 import styled from "@emotion/styled"
 import SocialBox from "../Molecules/SocialBox"
 import joincommunity from "../../images/text/text_joincommunity.svg"
-import socialneon from "../../images/bg_social_neon.svg"
+import socialneon from "../../images/bg/bg_social_neon.svg"
 
 import github from "../../images/icons/icon_github.svg"
 import discord from "../../images/icons/icon_discord.svg"

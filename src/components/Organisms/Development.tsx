@@ -3,7 +3,6 @@ import styled from '@emotion/styled'
 import Repository from "../Molecules/Repository"
 import development from "../../images/text/text_development.svg"
 import InfoBanner from "../Molecules/InfoBanner"
-import brickbg from "../../images/bg_dev.svg"
 import breakpoints from "../../styles/breakpoints"
 
 type DevelopmentProps = {
@@ -19,7 +18,6 @@ const Container=styled.div`
     justify-content: center;
     margin-top: 5rem;
     padding: 7rem 10rem;
-    background-image: url(${brickbg});
     background-size: cover; 
     background-repear: no-repeat;
 `

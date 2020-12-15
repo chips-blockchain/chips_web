@@ -9,14 +9,14 @@ export default function Layout({ children }) {
   const data = useStaticQuery(
     graphql`
       query {
-        bg: file(relativePath: { eq: "bgx1.png" }) {
+        bg: file(relativePath: { eq: "bg/bgx1.png" }) {
           childImageSharp {
             fluid(quality: 90, maxWidth: 1920) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
         },
-        brickBg: file(relativePath: { eq: "brick_bg.jpg" }) {
+        brickBg: file(relativePath: { eq: "bg/brick_bg.jpg" }) {
           childImageSharp {
             fluid(quality: 90) {
               ...GatsbyImageSharpFluid_withWebp
