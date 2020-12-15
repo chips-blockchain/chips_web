@@ -10,7 +10,6 @@ import Why from "../components/Organisms/Why"
 import PokerDapp from "../components/Organisms/PokerDapp"
 import { menuLinks } from "../data/menuLinks"
 import { getImageData } from "../utils/dataHelper"
-import pangeaDappHeader from "../images/text/text_pangeapokerdapp.svg"
 import whatischips from "../images/text/text_whatischips.svg"
 import whychips from "../images/text/text_whychips.svg"
 import Development from "../components/Organisms/Development"
@@ -71,49 +70,49 @@ export const query =  graphql`
     logoText: file(relativePath: { eq: "chips_logo_text.png" }) {
       childImageSharp {
         fixed(quality: 100, width: 200, height: 66) {
-          ...GatsbyImageSharpFixed
+          ...GatsbyImageSharpFixed_withWebp
         }
       }
     },
     github: file(relativePath: { eq: "github.png" }) {
       childImageSharp {
         fixed(quality: 90, width: 30, height: 30) {
-          ...GatsbyImageSharpFixed
+          ...GatsbyImageSharpFixed_withWebp
         }
       }
     },
     discord: file(relativePath: { eq: "discord.png" }) {
       childImageSharp {
         fixed(quality: 90, width: 30, height: 30) {
-          ...GatsbyImageSharpFixed
+          ...GatsbyImageSharpFixed_withWebp
         }
       }
     },
     benefitSecure: file(relativePath: { eq: "benefits/benefit_secure220.png" }) {
       childImageSharp {
         fixed(quality: 90, height: 220, width: 220) {
-          ...GatsbyImageSharpFixed
+          ...GatsbyImageSharpFixed_withWebp
         }
       }
     },    
     benefitShortTime: file(relativePath: { eq: "benefits/benefit_short_wait_times220.png" }) {
       childImageSharp {
         fixed(quality: 90, height: 220, width: 220) {
-          ...GatsbyImageSharpFixed
+          ...GatsbyImageSharpFixed_withWebp
         }
       }
     },    
     benefitRealTime: file(relativePath: { eq: "benefits/benefit_real_time_betting220.png" }) {
       childImageSharp {
         fixed(quality: 90, height: 220, width: 220) {
-          ...GatsbyImageSharpFixed
+          ...GatsbyImageSharpFixed_withWebp
         }
       }
     },    
     benefitBtcTech: file(relativePath: { eq: "benefits/benefit_btc_tech220.png" }) {
       childImageSharp {
         fixed(quality: 90, height: 220, width: 220) {
-          ...GatsbyImageSharpFixed
+          ...GatsbyImageSharpFixed_withWebp
         }
       }
     },
