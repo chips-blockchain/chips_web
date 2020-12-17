@@ -62,7 +62,7 @@ const ExtraInfo = styled.p`
 const Repository = ({ link, title, description, icon }: RepositoryProps): ReactElement => (
     <Container>
         {icon && <ClickableIcon icon={githubIcon} link={link}></ClickableIcon>}
-        <RepoName href="repositoryLink">
+        <RepoName href={link}>
             <h2>{title}</h2>        
             <ExtraInfo>{description}</ExtraInfo>
         </RepoName>

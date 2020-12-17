@@ -28,6 +28,10 @@ const Container = styled.div`
     width: 115px;
     border-radius: 5px;
     margin: 0.5rem;
+
+    & > a > div:hover {
+        background-color: var(--color-darkPurple);
+    }
 `
 
 const SocialBox = ({ icon, title, buttonText, buttonLink, color }: SocialBoxProps): ReactElement => (
