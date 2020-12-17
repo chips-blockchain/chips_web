@@ -106,7 +106,7 @@ const ArticleCard = ({ orientation, title, text, theme, themeImage }: ArticleCar
                         <rect x="50" width="40" height="5" rx="2.5" fill="#FF4E63"/>
                     </svg>
                     <p>{text}</p>
-                    <Button theme={theme}></Button>
+                    {/* <Button theme={theme}></Button> */}
                 </CardContent>
                 {!orientation &&
                     <ThreeWayAnimation themeImage={themeImage}></ThreeWayAnimation>
