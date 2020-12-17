@@ -4,10 +4,6 @@ export const menuLinks = [
       name: 'About'
     },
     {
-      link: '#pokerdapp',
-      name: 'Poker Dapp'
-    },
-    {
       link: '#development',
       name: 'Development'
     },
