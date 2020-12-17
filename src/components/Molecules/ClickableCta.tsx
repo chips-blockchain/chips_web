@@ -4,7 +4,8 @@ import OutlineButton from "../Atoms/OutlineButton"
 
 type ClickableCtaProps = {
     text: string,
-    icon: string
+    icon: string,
+    link: string
 }
 
 const defaultProps = {
@@ -34,9 +35,9 @@ const Container = styled.div`
     }
 `
 
-const ClickableCta= ({ text, icon }: ClickableCtaProps): ReactElement => (
+const ClickableCta= ({ text, icon, link }: ClickableCtaProps): ReactElement => (
     <Container>
-        <OutlineButton text={text} icon={icon} />
+        <OutlineButton text={text} icon={icon} link={link}/>
     </Container>
 )
 
