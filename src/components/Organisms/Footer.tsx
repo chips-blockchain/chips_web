@@ -3,14 +3,10 @@ import styled from "@emotion/styled"
 import SocialBox from "../Molecules/SocialBox"
 import joincommunity from "../../images/text/text_joincommunity.svg"
 import socialneon from "../../images/bg/bg_social_neon.svg"
-
-import github from "../../images/icons/icon_github.svg"
-import discord from "../../images/icons/icon_discord.svg"
-import mail from "../../images/icons/icon_mail.svg"
-import file from "../../images/icons/icon_file.svg"
-import twitter from "../../images/icons/icon_twitter.svg"
-import btc from "../../images/icons/icon_btc.svg"
 import breakpoints from "../../styles/breakpoints"
+import socialData from "../../data/socialData"
+import links from "../../data/links"
+
 
 const StyledFooter = styled.footer`
   background-size: cover; 
@@ -59,58 +55,26 @@ const ImageWrapper = styled.div`
   }
 `
 
-const Footer = ({ }) => {
+const Footer = () => {
   return (
        <StyledFooter id="joincommunity">
          <ImageWrapper>
             <img src={joincommunity}></img>      
          </ImageWrapper>
         <SocialLinks>
-          <SocialBox 
-            color={'#2735B5'} 
-            icon={discord}
-            title={"Discord"}
-            buttonText={"Chat"}
-            buttonLink={""}
-          />
-          <SocialBox 
-            color={'#3985BD'} 
-            icon={mail}
-            title={"Contact Us"}
-            buttonText={"Email"}
-            buttonLink={""}         
-          />
-          <SocialBox 
-            color={'#6CD087'} 
-            icon={file}
-            title={"Blog"}
-            buttonText={"Read"}
-            buttonLink={""}
-          />
-          <SocialBox 
-            color={'#3985BD'} 
-            icon={twitter}
-            title={"Twitter"}
-            buttonText={"Follow"}
-            buttonLink={""}
-          />
-          <SocialBox 
-            color={'#D03758'} 
-            icon={btc}
-            title={"BitcoinTalk"}
-            buttonText={"Post"}
-            buttonLink={""}
-          />
-          <SocialBox 
-            color={'#252525'} 
-            icon={github}
-            title={"Github"}
-            buttonText={"Learn"}
-            buttonLink={""}
-          />
+          {socialData.map((one, key) => 
+              <SocialBox 
+              color={one.color} 
+              key={key}
+              icon={one.icon}
+              title={one.title}
+              buttonText={one.buttonText}
+              buttonLink={one.buttonLink}
+            />
+          )}
         </SocialLinks>  
-        <p>Illustrations by Pwnz. Design by web_worker, Pwnz, NutellaLicka and Daria. Coded by Daria 🤗.</p>
-        <p>Copyright Chips Pangea Poker 2016. Privacy Policy. Terms of use.</p>
+        <p>Illustrations by Pwnz. Design by web_worker, Pwnz, NutellaLicka and Daria. Coded by <a href={links.daria}>Daria</a>.</p>
+        <p>Copyright Chips Pangea Poker 2016. <a href="">Privacy Policy</a>. <a href="">Terms of use.</a></p>
       </StyledFooter> 
     )
 }

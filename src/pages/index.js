@@ -16,6 +16,7 @@ import Development from "../components/Organisms/Development"
 import { cards } from "../data/cardsData"
 import { benefitsData } from "../data/benefitsData"
 import { pokerDappData } from "../data/pokerDappData"
+import { devLinks } from "../data/devLinks"
 
 export default function Home({data}) {
   return (
@@ -27,7 +28,6 @@ export default function Home({data}) {
           <Header 
             logoImage={data.logoText.childImageSharp.fixed}
             menuLinks={menuLinks}
-            navigationColor={'var(--color-almostWhite)'}
           />
           <Hero 
             title={'CHIPS revolutionises online gambling'}
@@ -46,7 +46,9 @@ export default function Home({data}) {
         <PokerDapp
           data={getImageData(data, pokerDappData)}
         />
-        <Development />
+        <Development
+          data={devLinks} 
+        />
      </Layout>
   )
 }

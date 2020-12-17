@@ -27,3 +27,10 @@ h3 {
 p {
     font-size: var(--font-size-p);
 }
+
+a {
+    color: var(--color-neonGreen);
+}
+a:hover {
+    color: var(--color-neonPink);
+}

@@ -2,7 +2,18 @@ import React from "react"
 import {Link } from "gatsby"
 import Navigation from "../Molecules/Navigation"
 import styled from "@emotion/styled"
-import Img from "gatsby-image"
+import Img, { FixedObject } from "gatsby-image"
+import { MenuLink } from "../Molecules/Navigation/types"
+
+type HeaderProps = {
+  logoImage: FixedObject,
+  menuLinks: Array<MenuLink> 
+}
+
+const defaultProps = {
+  logoImage: "",
+  menuLinks: [{link: "/", name: "Home"}]
+}
 
 const StyledHeader = styled.header`
   display: flex;
@@ -29,7 +40,7 @@ const Logo = styled.img`
   }
 `
 
-export default function Header({ logoImage, menuLinks, navigationColor }) {
+const Header = ({ logoImage, menuLinks }: HeaderProps) => {
   return (
       <StyledHeader>
         <Link to="/">
@@ -37,8 +48,10 @@ export default function Header({ logoImage, menuLinks, navigationColor }) {
         </Link>
        <Navigation
           menuLinks={menuLinks}
-          textColor={navigationColor}
        />
       </StyledHeader>
     )
 }
+
+Header.defaultProps = defaultProps
+export default Header

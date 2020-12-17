@@ -6,9 +6,11 @@ import InfoBanner from "../Molecules/InfoBanner"
 import breakpoints from "../../styles/breakpoints"
 
 type DevelopmentProps = {
+    data: Object
 }
 
 const defaultProps = {
+    data: []
 }
 
 const Container=styled.div`
@@ -66,24 +68,24 @@ const ImageWrapper = styled.div`
     }
 `
 
-const Development = ({  }: DevelopmentProps) => (
+const Development = ({ data }: DevelopmentProps) => (
     <Container id="development">
             <ImageWrapper>
                 <img src={development}></img>
             </ImageWrapper>
             <Content>
-                <Repositories>
-                    <Repository title={"MANUAL INSTALLATION"}  extraInfo={"for tech savvy"}></Repository>
-                    <Repository title={"PRE ALPHA TUTORIAL"} extraInfo={"for extra curious"}></Repository>
-                    <Repository title={"BET"} extraInfo={"backend repository in C"}></Repository>
-                    <Repository title={"POKER GUI"} extraInfo={"React based GUI"}></Repository>
-                    <Repository title={"DOCKER"} extraInfo={"Dockerized backend for the project"}></Repository>
-                </Repositories>
-                <Repositories>
-                    <Repository icon={false} title={"PANGEA WHITE PAPER"} extraInfo={"Co-written by jl777 and sg777"}></Repository>
-                    <Repository icon={false} title={"CHIPS FAQ"} extraInfo={"All you want to know"}></Repository>
-                    <Repository icon={false} title={"DISCORD"}  extraInfo={"Join join join us!"}></Repository>
-                </Repositories> 
+                {data.map(section =>
+                    <Repositories>
+                        {section.map((repo, key) =>                         
+                            <Repository 
+                                key={key}
+                                title={repo.title}  
+                                description={repo.description}
+                                link={repo.github ? repo.github : repo.link}
+                                icon={!!repo.github}
+                            />)}
+                    </Repositories>
+                )}                
             </Content>       
             <AlphaNote>The official alpha version has not been released yet. For more information on the project updates please follow our announcements in Discord and Twitter.</AlphaNote>    
             <InfoBanner></InfoBanner>

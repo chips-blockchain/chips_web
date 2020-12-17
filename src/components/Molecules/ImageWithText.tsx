@@ -2,7 +2,7 @@ import React, { ReactElement } from "react"
 import Img, { FluidObject } from 'gatsby-image'
 import styled from "@emotion/styled"
 import breakpoints from "../../styles/breakpoints"
-import { loremTitle, loremSubtitle, loremText } from "../../utils/lorem"
+import { title, subtitle, text } from "../../utils/lorem"
 
 export type ImageWithTextProps = {
     image: FluidObject,
@@ -13,9 +13,9 @@ export type ImageWithTextProps = {
 
 const defaultProps = {
     image: '',
-    title: loremTitle,
-    subtitle: loremSubtitle,
-    text: loremText
+    title: title,
+    subtitle: subtitle,
+    text: text
 }
 
 const Container = styled.div`

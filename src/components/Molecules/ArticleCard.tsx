@@ -5,7 +5,7 @@ import Button from "../Atoms/Button"
 import breakpoints from "../../styles/breakpoints"
 import ArticleCardInline from "./ArticleCardInline"
 
-type ArticleCardProps = {
+export type ArticleCardProps = {
     title: string,
     text: string,
     orientation: boolean,
@@ -18,7 +18,8 @@ const defaultProps = {
     /* 180 characters */
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lacus vel facilisis volutpat est velit. Lobortis sceler.",
     theme: 'pink',
-    themeImage: 'machine'
+    themeImage: 'machine',
+    orientation: false
 }
 
 const ArticleContainer = styled.div`

@@ -16,7 +16,7 @@ export const menuLinks = [
       name: 'Articles'
     },
     {
-      link: 'http://docs.chips.cash/en/latest/faq.html',
+      link: '#',
       name: 'FAQ'
     }            
   ]

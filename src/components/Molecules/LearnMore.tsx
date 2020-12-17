@@ -29,6 +29,9 @@ const Container = styled.div`
     & > img {
         margin: auto;
     }
+    & > a:hover {
+        color: var(--color-neonGreen);
+    }
 `
 
 const LearnMore = ({ text, goToClassName }: LearnMoreProps): ReactElement => (

@@ -1,28 +1,25 @@
 import React from "react"
 import Title from "../Atoms/Title"
 import HeroText from "../Atoms/HeroText"
-import Img, { FixedObject, FluidObject } from 'gatsby-image'
+import Img, { FluidObject } from 'gatsby-image'
 import styled from '@emotion/styled'
 import { sampleBase64 } from "../../utils/sampleBase64"
 import github from "../../images/icons/icon_github.svg"
 import discord from "../../images/icons/icon_discord.svg"
 import ClickableCta from "../Molecules/ClickableCta"
 import LearnMore from "../Molecules/LearnMore"
+import breakpoints from "../../styles/breakpoints"
 
 type HeroProps = {
     title: string,
     text: string,
-    logoImg: FluidObject,
-    icon1: FixedObject,
-    icon2: FixedObject,
+    logoImage: FluidObject
 }
 
 const defaultProps = {
     title: "Title",
     text: "Lorem ipsum",
-    logoImg: sampleBase64,
-    icon1: sampleBase64,
-    icon2: sampleBase64
+    logoImage: sampleBase64
 }
 
 const Container = styled.div`
@@ -33,7 +30,7 @@ const HeroContainer=styled.div`
     flex-direction: row;
     justify-content: space-evenly;
     padding: 5rem;    
-    @media(max-width: 43em) {
+    @media(max-width: ${breakpoints.mobile}) {
         flex-direction: column;
         padding: 1rem;
     }
@@ -43,7 +40,7 @@ const HeroTextContainer = styled.div`
     display: flex;
     flex-direction:column;
     padding-top: 5rem;
-    @media(max-width: 43em) {
+    @media(max-width: ${breakpoints.mobile}) {
         background: rgba(25, 7, 79, 0.7);
         padding: 2rem;
     }
@@ -53,7 +50,7 @@ const LogoWrapper = styled.div`
     minWidth: 200px;
     width: 575px;
     max-width: 575px;
-    @media(max-width: 43em) {
+    @media(max-width: ${breakpoints.mobile}) {
         width: 400px;
         margin: auto;
     }
@@ -70,7 +67,7 @@ const CTAs = styled.div`
             width: 180px;
         }
     }
-    @media(max-width: 43em) {
+    @media(max-width: ${breakpoints.mobile}) {
         flex-direction: column;
         align-items: left;
         & > div {
@@ -79,11 +76,11 @@ const CTAs = styled.div`
     }
 `
 
-const Hero = ({ title, text, logoImg, icon1, icon2 }: HeroProps) => (
+const Hero = ({ title, text, logoImage }: HeroProps) => (
     <Container>
         <HeroContainer>
             <LogoWrapper>
-                <Img fluid={logoImg} />
+                <Img fluid={logoImage} />
             </LogoWrapper>
             <HeroTextContainer>
                 <Title>{title}</Title>

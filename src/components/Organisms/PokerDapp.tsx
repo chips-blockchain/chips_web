@@ -45,8 +45,9 @@ const PokerDapp = ({ header, data } : PokerDappProps ) : ReactElement => {
         <HeaderImageWrapper>
             <img src={header}></img>
         </HeaderImageWrapper>
-        {data.map(one => 
+        {data.map((one, key) => 
             <ImageWithText 
+                key={key}
                 image={one.image}
                 title={one.title}
                 subtitle={one.subtitle}

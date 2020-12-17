@@ -2,6 +2,8 @@ import React from "react"
 import styled from "@emotion/styled"
 import BenefitCard from "../Molecules/BenefitCard"
 import breakpoints from "../../styles/breakpoints"
+import links from "../../data/links"
+
 const AboutSection = styled.div`
   display: flex;
   flex-direction: column;
@@ -9,14 +11,6 @@ const AboutSection = styled.div`
   align-items: center;
   margin-top: 9rem;
   height: 100%;
-`
-
-const ChipsLink = styled.a`
-  color: var(--color-neonPink)
-`
-
-const PangeaLink = styled.a`
-  color: var(--color-neonGreen)
 `
 
 const Description = styled.p`
@@ -93,8 +87,8 @@ export default function About({ header, benefits}) {
       <AboutSection id="whatischips">
           <img style={{width: `100%`, maxWidth: `600px`}} src={header}></img>
           <Description>
-            <ChipsLink href="#">CHIPS</ChipsLink> is a cryptocurrency used to play poker games <br/> 
-            powered by the <PangeaLink href="#">Pangea Protocol</PangeaLink>.
+            <a href={links.chips}>CHIPS</a> is a cryptocurrency used to play poker games <br/>
+            powered by the <a href={links.pangea}>Pangea Protocol</a>.
           </Description>
           <BenefitsSection>
             {benefits.map((benefit, key) => (

@@ -3,17 +3,22 @@ import styled from '@emotion/styled'
 import ClickableIcon from "../Atoms/ClickableIcon"
 import githubIcon from "../../images/icons/icon_github.svg"
 import breakpoints from "../../styles/breakpoints"
+import {title, subtitle, text} from "../../utils/lorem"
+import links from "../../data/links"
 
 type RepositoryProps = {
-    repositoryLink: string,
+    link: string,
     title: string,
-    text: string
+    description: string,
+    text: string,
+    icon: boolean
 }
 
 const defaultProps = {
-    repositoryLink: "https://github.com/chips-blockchain/",
-    title: "Lorem Ipsum",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lacus vel facilisis volutpat est velit. Lobortis sceler.",
+    link: links.chipsproject,
+    title: title,
+    description: subtitle,
+    text: text,
     icon: true
 }
 
@@ -54,12 +59,12 @@ const ExtraInfo = styled.p`
     font-style: italic;
 `
 
-const Repository = ({ repositoryLink, title, extraInfo, icon }: RepositoryProps): ReactElement => (
+const Repository = ({ link, title, description, icon }: RepositoryProps): ReactElement => (
     <Container>
-        {icon && <ClickableIcon icon={githubIcon} link={repositoryLink}></ClickableIcon>}
+        {icon && <ClickableIcon icon={githubIcon} link={link}></ClickableIcon>}
         <RepoName href="repositoryLink">
             <h2>{title}</h2>        
-            <ExtraInfo>{extraInfo}</ExtraInfo>
+            <ExtraInfo>{description}</ExtraInfo>
         </RepoName>
     </Container>
 )

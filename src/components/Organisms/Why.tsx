@@ -2,6 +2,7 @@ import React from "react"
 import styled from "@emotion/styled"
 import ArticleCard from "../Molecules/ArticleCard"
 import breakpoints from "../../styles/breakpoints"
+import { ArticleCardProps } from "../Molecules/ArticleCard"
 
 const WhySection=styled.div`
     display: flex;
@@ -19,22 +20,16 @@ const WhySection=styled.div`
 const ImageWrapper = styled.div`
   width: 500px;
   margin: auto;
+
   @media(max-width: ${breakpoints.mobile}) {
     width: 100%;
-}
+  }
 `
 
-type ArticleCard = {
-    title: string,
-    text: string,
-    themeImage: string
-}
-
 type WhyProps = {
-    cards: Array<ArticleCard>,
+    cards: Array<ArticleCardProps>,
     header: string
 }
-
 
 const defaultProps = {
    cards: []
