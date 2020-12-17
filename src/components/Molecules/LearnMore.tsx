@@ -36,7 +36,7 @@ const Container = styled.div`
 
 const LearnMore = ({ text, goToClassName }: LearnMoreProps): ReactElement => (
     <Container>
-        <a href='#whatischips'>{text}</a>
+        <a href={'#'.concat(goToClassName)}>{text}</a>
         <img src={down}></img>
     </Container>
 )

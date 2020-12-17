@@ -9,7 +9,7 @@ type InfoBannerProps = {
 
 const defaultProps = {
     title: "Want to contribute?",
-    text: "We are an open source project and we have very limited development capacity and funds. Whether you would like to contribute your time or funds reach out to us. Please feel free to join our Discord and reach out to NutellaLicka, sg777 and daria."
+    text: "We are an open source project and we have very limited development capacity and funds. Whether you would like to contribute your time or funds reach out to us. Please feel free to join our Discord and reach out to NutellaLicka and daria."
 }
 const Container = styled.div`
     border: 7px solid var(--color-purple);
@@ -34,7 +34,7 @@ const Container = styled.div`
 const InfoBanner = ({ title, text }: InfoBannerProps): ReactElement => (
     <Container>
        <h2>{title}</h2>
-       <p>We are an open source project and we have very limited development capacity and funds. Whether you would like to contribute your time or funds please reach out to us. ❤️ <br/><br/> Join our Discord and reach out to NutellaLicka, sg777 or daria.</p>
+       <p>{text}</p>
     </Container>
 )
 
