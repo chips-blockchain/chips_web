@@ -1,12 +1,13 @@
     import React from "react"
 import styled from '@emotion/styled'
 import Repository from "../Molecules/Repository"
-import development from "../../images/text/text_development.svg"
 import InfoBanner from "../Molecules/InfoBanner"
 import breakpoints from "../../styles/breakpoints"
+import Img, { FluidObject } from "gatsby-image"
 
 type DevelopmentProps = {
-    data: Object
+    data: Object,
+    header: FluidObject
 }
 
 const defaultProps = {
@@ -68,10 +69,10 @@ const ImageWrapper = styled.div`
     }
 `
 
-const Development = ({ data }: DevelopmentProps) => (
+const Development = ({ data, header }: DevelopmentProps) => (
     <Container id="development">
-            <ImageWrapper>
-                <img src={development}></img>
+            <ImageWrapper>            
+                <Img fluid={header}></Img>
             </ImageWrapper>
             <Content>
                 {data.map(section =>

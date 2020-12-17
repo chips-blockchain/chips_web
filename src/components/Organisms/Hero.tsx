@@ -4,8 +4,7 @@ import HeroText from "../Atoms/HeroText"
 import Img, { FluidObject } from 'gatsby-image'
 import styled from '@emotion/styled'
 import { sampleBase64 } from "../../utils/sampleBase64"
-import github from "../../images/icons/icon_github.svg"
-import discord from "../../images/icons/icon_discord.svg"
+import icons from "../../data/icons"
 import ClickableCta from "../Molecules/ClickableCta"
 import LearnMore from "../Molecules/LearnMore"
 import breakpoints from "../../styles/breakpoints"
@@ -90,12 +89,12 @@ const Hero = ({ title, text, logoImage }: HeroProps) => (
                     <ClickableCta
                         text="Contribute"
                         link={links.chipsproject}
-                        icon={github}
+                        icon={icons.github}
                     ></ClickableCta>
                     <ClickableCta
                         text="Join us"
                         link={links.discord}
-                        icon={discord}
+                        icon={icons.discord}
                     ></ClickableCta>               
                 </CTAs>
             </HeroTextContainer>

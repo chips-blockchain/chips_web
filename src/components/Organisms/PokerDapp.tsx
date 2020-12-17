@@ -2,16 +2,15 @@ import React, { ReactElement } from "react"
 import styled from "@emotion/styled"
 import ImageWithText, { ImageWithTextProps } from "../Molecules/ImageWithText"
 import breakpoints from "../../styles/breakpoints"
-import pangeaDappHeader from "../../images/text/text_pangeapokerdapp.svg"
+import Img, { FluidObject } from "gatsby-image"
 
 
 type PokerDappProps = {
-    header: string,
+    header: FluidObject,
     data: Array<ImageWithTextProps>
 }
 
 const defaultProps = {
-    header: pangeaDappHeader,
     data: []
 }
 
@@ -43,7 +42,7 @@ const PokerDapp = ({ header, data } : PokerDappProps ) : ReactElement => {
   return (
       <Container id="pokerdapp">
         <HeaderImageWrapper>
-            <img src={header}></img>
+            <Img fluid={header}></Img>
         </HeaderImageWrapper>
         {data.map((one, key) => 
             <ImageWithText 

@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react"
 import styled from '@emotion/styled'
-import github from "../../images/icons/icon_github.svg"
+import icons from "../../data/icons"
 
 type ClickableIconProps = {
     link: string,
@@ -9,7 +9,7 @@ type ClickableIconProps = {
 
 const defaultProps = {
     link: "https://link.com",
-    icon: github
+    icon: icons.github
 }
 
 const IconLink = styled.a`

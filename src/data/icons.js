@@ -4,6 +4,7 @@ import mail from "../images/icons/icon_mail.svg"
 import file from "../images/icons/icon_file.svg"
 import twitter from "../images/icons/icon_twitter.svg"
 import btc from "../images/icons/icon_btc.svg"
+import down from "../images/icons/icon_down.svg"
 
 const icons = {
   discord,
@@ -11,7 +12,8 @@ const icons = {
   mail,
   file,
   twitter,
-  btc
+  btc,
+  down
 }
 
 export default icons

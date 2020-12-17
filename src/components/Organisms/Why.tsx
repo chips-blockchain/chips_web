@@ -3,6 +3,7 @@ import styled from "@emotion/styled"
 import ArticleCard from "../Molecules/ArticleCard"
 import breakpoints from "../../styles/breakpoints"
 import { ArticleCardProps } from "../Molecules/ArticleCard"
+import Img, { FluidObject } from "gatsby-image"
 
 const WhySection=styled.div`
     display: flex;
@@ -28,7 +29,7 @@ const ImageWrapper = styled.div`
 
 type WhyProps = {
     cards: Array<ArticleCardProps>,
-    header: string
+    header: FluidObject
 }
 
 const defaultProps = {
@@ -39,7 +40,7 @@ const Why = ({ cards, header }: WhyProps) => {
   return (
         <WhySection>
             <ImageWrapper>
-              <img src={header}></img>
+              <Img fluid={header}></Img>
             </ImageWrapper>
             {cards.map((card, key) => (
               <ArticleCard

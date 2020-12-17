@@ -3,6 +3,7 @@ import styled from "@emotion/styled"
 import BenefitCard from "../Molecules/BenefitCard"
 import breakpoints from "../../styles/breakpoints"
 import links from "../../data/links"
+import Img from "gatsby-image"
 
 const AboutSection = styled.div`
   display: flex;
@@ -85,7 +86,7 @@ const BenefitsSection = styled.div`
 export default function About({ header, benefits}) {
   return (
       <AboutSection id="whatischips">
-          <img style={{width: `100%`, maxWidth: `600px`}} src={header}></img>
+          <Img style={{width: `100%`, maxWidth: `600px`}} fluid={header}></Img>
           <Description>
             <a href={links.chips}>CHIPS</a> is a cryptocurrency used to play poker games <br/>
             powered by the <a href={links.pangea}>Pangea Protocol</a>.

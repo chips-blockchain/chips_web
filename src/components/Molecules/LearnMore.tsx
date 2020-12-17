@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react"
 import styled from '@emotion/styled'
-import down from "../../images/icons/icon_down.svg"
+import icons from "../../data/icons"
 
 type LearnMoreProps = {
     text: string,
@@ -37,7 +37,7 @@ const Container = styled.div`
 const LearnMore = ({ text, goToClassName }: LearnMoreProps): ReactElement => (
     <Container>
         <a href={'#'.concat(goToClassName)}>{text}</a>
-        <img src={down}></img>
+        <img src={icons.down}></img>
     </Container>
 )
 

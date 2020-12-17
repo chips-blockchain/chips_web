@@ -22,7 +22,14 @@ export default function Layout({ children }) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
-        }        
+        },
+        textJoinCommunity: file(relativePath: { eq: "text/joincommunity.png" }) {
+          childImageSharp {
+            fluid(quality: 90,  maxWidth: 800) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        },                 
       }
     `)
 
@@ -38,7 +45,9 @@ export default function Layout({ children }) {
           Tag="footer"
           fluid={data.brickBg.childImageSharp.fluid}
         >
-        <Footer />
+        <Footer 
+          header={data.textJoinCommunity.childImageSharp.fluid}
+        />
       </BackgroundImage>
     </div>
   )

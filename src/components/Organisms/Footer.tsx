@@ -1,11 +1,11 @@
 import React from "react"
 import styled from "@emotion/styled"
 import SocialBox from "../Molecules/SocialBox"
-import joincommunity from "../../images/text/text_joincommunity.svg"
 import socialneon from "../../images/bg/bg_social_neon.svg"
 import breakpoints from "../../styles/breakpoints"
 import socialData from "../../data/socialData"
 import links from "../../data/links"
+import Img from "gatsby-image"
 
 
 const StyledFooter = styled.footer`
@@ -55,11 +55,11 @@ const ImageWrapper = styled.div`
   }
 `
 
-const Footer = () => {
+const Footer = ( {header}) => {
   return (
        <StyledFooter id="joincommunity">
          <ImageWrapper>
-            <img src={joincommunity}></img>      
+            <Img fluid={header}></Img>      
          </ImageWrapper>
         <SocialLinks>
           {socialData.map((one, key) => 

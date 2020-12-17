@@ -10,8 +10,6 @@ import Why from "../components/Organisms/Why"
 import PokerDapp from "../components/Organisms/PokerDapp"
 import { menuLinks } from "../data/menuLinks"
 import { getImageData } from "../utils/dataHelper"
-import whatischips from "../images/text/text_whatischips.svg"
-import whychips from "../images/text/text_whychips.svg"
 import Development from "../components/Organisms/Development"
 import { cards } from "../data/cardsData"
 import { benefitsData } from "../data/benefitsData.jsx"
@@ -19,7 +17,6 @@ import { pokerDappData } from "../data/pokerDappData"
 import { devLinks } from "../data/devLinks"
 
 export default function Home({data}) {
-  console.log(benefitsData)
   return (
     <Layout>
       <BackgroundImage
@@ -37,17 +34,19 @@ export default function Home({data}) {
         />
         </BackgroundImage>
         <About 
-          header={whatischips} 
+          header={data.textWhatIsChips.childImageSharp.fluid} 
           benefits={getImageData(data, benefitsData)}
           />
         <Why 
-          header={whychips} 
+          header={data.textWhyChips.childImageSharp.fluid} 
           cards={cards}
           />
         <PokerDapp
+          header={data.textPokerDapp.childImageSharp.fluid}         
           data={getImageData(data, pokerDappData)}
         />
         <Development
+          header={data.textDevelopment.childImageSharp.fluid}                 
           data={devLinks} 
         />
      </Layout>
@@ -73,20 +72,6 @@ export const query =  graphql`
     logoText: file(relativePath: { eq: "chips_logo_text.png" }) {
       childImageSharp {
         fixed(quality: 100, width: 200, height: 66) {
-          ...GatsbyImageSharpFixed_withWebp
-        }
-      }
-    },
-    github: file(relativePath: { eq: "github.png" }) {
-      childImageSharp {
-        fixed(quality: 90, width: 30, height: 30) {
-          ...GatsbyImageSharpFixed_withWebp
-        }
-      }
-    },
-    discord: file(relativePath: { eq: "discord.png" }) {
-      childImageSharp {
-        fixed(quality: 90, width: 30, height: 30) {
           ...GatsbyImageSharpFixed_withWebp
         }
       }
@@ -147,5 +132,33 @@ export const query =  graphql`
         }
       }
     },
+    textWhatIsChips: file(relativePath: { eq: "text/whatischips.png" }) {
+      childImageSharp {
+        fluid(quality: 90,  maxWidth: 600) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    },
+    textWhyChips: file(relativePath: { eq: "text/whychips.png" }) {
+      childImageSharp {
+        fluid(quality: 90,  maxWidth: 500) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    },  
+    textDevelopment: file(relativePath: { eq: "text/development.png" }) {
+      childImageSharp {
+        fluid(quality: 90,  maxWidth: 700) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    },   
+    textPokerDapp: file(relativePath: { eq: "text/pangeapokerdapp.png" }) {
+      childImageSharp {
+        fluid(quality: 90,  maxWidth: 700) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
   }
 `

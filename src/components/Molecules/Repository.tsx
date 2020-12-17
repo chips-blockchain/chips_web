@@ -1,7 +1,7 @@
 import React, { ReactElement } from "react"
 import styled from '@emotion/styled'
 import ClickableIcon from "../Atoms/ClickableIcon"
-import githubIcon from "../../images/icons/icon_github.svg"
+import icons from "../../data/icons"
 import breakpoints from "../../styles/breakpoints"
 import {title, subtitle, text} from "../../utils/lorem"
 import links from "../../data/links"
@@ -61,7 +61,7 @@ const ExtraInfo = styled.p`
 
 const Repository = ({ link, title, description, icon }: RepositoryProps): ReactElement => (
     <Container>
-        {icon && <ClickableIcon icon={githubIcon} link={link}></ClickableIcon>}
+        {icon && <ClickableIcon icon={icons.github} link={link}></ClickableIcon>}
         <RepoName href={link}>
             <h2>{title}</h2>        
             <ExtraInfo>{description}</ExtraInfo>
