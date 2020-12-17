@@ -10,7 +10,8 @@ export type ArticleCardProps = {
     text: string,
     orientation: boolean,
     theme: string,
-    themeImage: string
+    themeImage: string,
+    link: string
 }
 
 const defaultProps = {
@@ -19,7 +20,8 @@ const defaultProps = {
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lacus vel facilisis volutpat est velit. Lobortis sceler.",
     theme: 'pink',
     themeImage: 'machine',
-    orientation: false
+    orientation: false,
+    link: '/link'
 }
 
 const ArticleContainer = styled.div`
@@ -90,7 +92,7 @@ const Wrapper = styled.div`
     }
 `
 
-const ArticleCard = ({ orientation, title, text, theme, themeImage }: ArticleCardProps): ReactElement => {
+const ArticleCard = ({ orientation, title, text, theme, themeImage, link }: ArticleCardProps): ReactElement => {
     return (         
         <div>
             <ArticleContainer >
@@ -106,7 +108,7 @@ const ArticleCard = ({ orientation, title, text, theme, themeImage }: ArticleCar
                         <rect x="50" width="40" height="5" rx="2.5" fill="#FF4E63"/>
                     </svg>
                     <p>{text}</p>
-                    {/* <Button theme={theme}></Button> */}
+                    <Button theme={theme} link={link}></Button>
                 </CardContent>
                 {!orientation &&
                     <ThreeWayAnimation themeImage={themeImage}></ThreeWayAnimation>

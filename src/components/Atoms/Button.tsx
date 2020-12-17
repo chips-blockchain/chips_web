@@ -27,10 +27,11 @@ const StyledButton = styled.button`
     font-size: var(--font-size-p);
     font-family: var(--font--family-secondary);
     font-weight: bold;
+    cursor: pointer;
 
     background: ${props => 
-        props.red ? 'linear-gradient(180deg, rgba(255, 17, 81, 0) 0%, rgba(255, 17, 81, 0.8) 0.01%, rgba(255, 66, 116, 0.9) 100%)' :
-        props.blue ?  'linear-gradient(180deg, rgba(75, 171, 248, 0) 0%, rgba(73, 130, 244, 0.4) 0.01%, #4BABF8 100%)' :
+        props.theme == 'red' ? 'linear-gradient(180deg, rgba(255, 17, 81, 0) 0%, rgba(255, 17, 81, 0.8) 0.01%, rgba(255, 66, 116, 0.9) 100%)' :
+        props.theme == 'blue' ?  'linear-gradient(180deg, rgba(75, 171, 248, 0) 0%, rgba(73, 130, 244, 0.4) 0.01%, #4BABF8 100%)' :
             'linear-gradient(180deg, rgba(245, 63, 255, 0) 0%, rgba(201, 42, 204, 0.4) 0.01%, #F53FFF 100%)'
     }
 

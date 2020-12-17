@@ -14,11 +14,12 @@ import whatischips from "../images/text/text_whatischips.svg"
 import whychips from "../images/text/text_whychips.svg"
 import Development from "../components/Organisms/Development"
 import { cards } from "../data/cardsData"
-import { benefitsData } from "../data/benefitsData"
+import { benefitsData } from "../data/benefitsData.jsx"
 import { pokerDappData } from "../data/pokerDappData"
 import { devLinks } from "../data/devLinks"
 
 export default function Home({data}) {
+  console.log(benefitsData)
   return (
     <Layout>
       <BackgroundImage

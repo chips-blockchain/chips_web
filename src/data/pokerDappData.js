@@ -20,7 +20,7 @@ export const pokerDappData = [
     {
         title: 'Beautiful UI',
         subtitle: 'Pangea Poker GUI offers easy to use and eye pleasing user experience.',
-        text: 'We take a lot of pride in our GUI design which was crafted with love by @pixelshove and is continuously getting love from @daria now. We are planning to integrate many more different themes for the game, from classical to futuristic.',
+        text: "True to an online poker experience that's easy on the eyes, the Pangea Poker graphics are simply stunning. You can take a seat at a table on the moon, surrounded by fellow poker enthusiasts from around the globe; or you can sit in a late-night purple poker room - with more themes to come.  The buttons and tabs make it easy to use so you can enjoy playing a decentralized poker that feels like a fun online casino room.",
         image: 'ui'
     }
 ]

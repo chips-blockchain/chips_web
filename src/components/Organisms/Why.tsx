@@ -48,6 +48,8 @@ const Why = ({ cards, header }: WhyProps) => {
                 text={card.text}
                 orientation={key%2==1}
                 themeImage={card.themeImage}
+                link={card.link}
+                theme={card.theme}
               />
             ))}
           </WhySection>
