@@ -1,110 +1,140 @@
 import React, { ReactElement } from "react"
-import styled from '@emotion/styled'
+import styled from "@emotion/styled"
 import Img, { FixedObject } from "gatsby-image"
 import { graphql, StaticQuery } from "gatsby"
 
 type ThreeWayAnimationProps = {
-    themeImage: string
+  themeImage: string
 }
 
-const defaultProps = {
-}
+const defaultProps = {}
 
 const Container = styled.div`
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px; 
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
 
-    div { grid-area: 1 / 1 / 2 / 2; } 
-    justify-items: center;
-    align-items: center;
-    padding: 1rem;
+  div {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  justify-items: center;
+  align-items: center;
+  padding: 1rem;
 `
 
-const ThreeWayAnimation = ({ themeImage }: ThreeWayAnimationProps): ReactElement => {
-    return (
+const ThreeWayAnimation = ({
+  themeImage,
+}: ThreeWayAnimationProps): ReactElement => {
+  return (
     <StaticQuery
-        query={
-            graphql`
-                query {
-                    coinPart1: file(relativePath: { eq: "articleCards/card_chips_chip.png" }) {
-                        childImageSharp {
-                            fixed(quality: 90, height: 200, width: 300) {
-                            ...GatsbyImageSharpFixed_withWebp
-                            }
-                        }
-                    },
-                    coinPart2: file(relativePath: { eq: "articleCards/card_chips_dice.png" }) {
-                        childImageSharp {
-                            fixed(quality: 90, height: 250, width: 300) {
-                            ...GatsbyImageSharpFixed_withWebp
-                            }
-                        }
-                    },
-                    coinPart3: file(relativePath: { eq: "articleCards/card_chips_gold.png" }) {
-                        childImageSharp {
-                            fixed(quality: 90, height: 200, width: 300) {
-                            ...GatsbyImageSharpFixed_withWebp
-                            }
-                        }
-                    },
-                    cardsPart1: file(relativePath: { eq: "articleCards/card_rel_card.png" }) {
-                        childImageSharp {
-                            fixed(quality: 90, height: 200, width: 300) {
-                            ...GatsbyImageSharpFixed_withWebp
-                            }
-                        }
-                    },
-                    cardsPart2: file(relativePath: { eq: "articleCards/card_rel_chips.png" }) {
-                        childImageSharp {
-                            fixed(quality: 90, height: 250, width: 300) {
-                            ...GatsbyImageSharpFixed_withWebp
-                            }
-                        }
-                    },
-                    cardsPart3: file(relativePath: { eq: "articleCards/card_rel_dice.png" }) {
-                        childImageSharp {
-                            fixed(quality: 90, height: 250, width: 300) {
-                            ...GatsbyImageSharpFixed_withWebp
-                            }
-                        }
-                    },
-                    machinePart1: file(relativePath: { eq: "articleCards/card_safe_body.png" }) {
-                        childImageSharp {
-                            fixed(quality: 90, height: 220) {
-                            ...GatsbyImageSharpFixed_withWebp
-                            }
-                        }
-                    },
-                    machinePart2: file(relativePath: { eq: "articleCards/card_safe_coins.png" }) {
-                        childImageSharp {
-                            fixed(quality: 90, height: 220) {
-                            ...GatsbyImageSharpFixed_withWebp
-                            }
-                        }
-                    },
-                    machinePart3: file(relativePath: { eq: "articleCards/card_safe_glow.png" }) {
-                        childImageSharp {
-                            fixed(quality: 90, height: 220) {
-                            ...GatsbyImageSharpFixed_withWebp
-                            }
-                        }
-                    }                                          
-                }`
+      query={graphql`
+        query {
+          coinPart1: file(
+            relativePath: { eq: "articleCards/card_chips_chip.png" }
+          ) {
+            childImageSharp {
+              fixed(quality: 90, height: 200, width: 300) {
+                ...GatsbyImageSharpFixed_withWebp
+              }
             }
-        render={data =>  {
-            return(
-        <Container>
-            <Img className="one" fixed={data[themeImage.concat('Part1')].childImageSharp.fixed}/>              
-            <Img className="two" fixed={data[themeImage.concat('Part2')].childImageSharp.fixed}/>
-            <Img className="three" fixed={data[themeImage.concat('Part3')].childImageSharp.fixed}/>
-        </Container>
-        )}}
-    />
-    )
+          }
+          coinPart2: file(
+            relativePath: { eq: "articleCards/card_chips_dice.png" }
+          ) {
+            childImageSharp {
+              fixed(quality: 90, height: 250, width: 300) {
+                ...GatsbyImageSharpFixed_withWebp
+              }
+            }
+          }
+          coinPart3: file(
+            relativePath: { eq: "articleCards/card_chips_gold.png" }
+          ) {
+            childImageSharp {
+              fixed(quality: 90, height: 200, width: 300) {
+                ...GatsbyImageSharpFixed_withWebp
+              }
+            }
+          }
+          cardsPart1: file(
+            relativePath: { eq: "articleCards/card_rel_card.png" }
+          ) {
+            childImageSharp {
+              fixed(quality: 90, height: 200, width: 300) {
+                ...GatsbyImageSharpFixed_withWebp
+              }
+            }
+          }
+          cardsPart2: file(
+            relativePath: { eq: "articleCards/card_rel_chips.png" }
+          ) {
+            childImageSharp {
+              fixed(quality: 90, height: 250, width: 300) {
+                ...GatsbyImageSharpFixed_withWebp
+              }
+            }
+          }
+          cardsPart3: file(
+            relativePath: { eq: "articleCards/card_rel_dice.png" }
+          ) {
+            childImageSharp {
+              fixed(quality: 90, height: 250, width: 300) {
+                ...GatsbyImageSharpFixed_withWebp
+              }
+            }
+          }
+          machinePart1: file(
+            relativePath: { eq: "articleCards/card_safe_body.png" }
+          ) {
+            childImageSharp {
+              fixed(quality: 90, height: 220) {
+                ...GatsbyImageSharpFixed_withWebp
+              }
+            }
+          }
+          machinePart2: file(
+            relativePath: { eq: "articleCards/card_safe_coins.png" }
+          ) {
+            childImageSharp {
+              fixed(quality: 90, height: 220) {
+                ...GatsbyImageSharpFixed_withWebp
+              }
+            }
+          }
+          machinePart3: file(
+            relativePath: { eq: "articleCards/card_safe_glow.png" }
+          ) {
+            childImageSharp {
+              fixed(quality: 90, height: 220) {
+                ...GatsbyImageSharpFixed_withWebp
+              }
+            }
+          }
         }
+      `}
+      render={data => {
+        return (
+          <Container>
+            <Img
+              className="one"
+              fixed={data[themeImage.concat("Part1")].childImageSharp.fixed}
+            />
+            <Img
+              className="two"
+              fixed={data[themeImage.concat("Part2")].childImageSharp.fixed}
+            />
+            <Img
+              className="three"
+              fixed={data[themeImage.concat("Part3")].childImageSharp.fixed}
+            />
+          </Container>
+        )
+      }}
+    />
+  )
+}
 
 ThreeWayAnimation.defaultProps = defaultProps
 export default ThreeWayAnimation

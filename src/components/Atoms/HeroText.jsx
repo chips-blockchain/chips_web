@@ -9,6 +9,6 @@ const HeroText = styled.p`
   font-weight: 400;
   max-width: 630px;
   margin-top: 0px;
-`;
+`
 
-export default HeroText;
+export default HeroText

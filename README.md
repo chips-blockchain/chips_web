@@ -30,10 +30,11 @@ gatsby develop
 
 The site is now running at `http://localhost:8000`
 
-GraphQL is accessible at _`http://localhost:8000/___graphql`_. 
+GraphQL is accessible at \_`http://localhost:8000/___graphql`\_.
 Check [Gatsby tutorial](https://www.gatsbyjs.com/tutorial/part-five/#introducing-graphiql) for more info on how to use it.
 
 ## Information on Gatsby
+
 ### Gatsby speicfic configuration files
 
 **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.

@@ -7,9 +7,8 @@ import socialData from "../../data/socialData"
 import links from "../../data/links"
 import Img from "gatsby-image"
 
-
 const StyledFooter = styled.footer`
-  background-size: cover; 
+  background-size: cover;
   background-repear: no-repeat;
   margin: 0;
   padding-top: 10rem;
@@ -17,14 +16,14 @@ const StyledFooter = styled.footer`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  @media(max-width: ${breakpoints.mobile}) {
+  @media (max-width: ${breakpoints.mobile}) {
     padding-top: 5rem;
   }
 `
 
 const SocialLinks = styled.div`
   background-image: url(${socialneon});
-  background-size: cover; 
+  background-size: cover;
   background-repear: no-repeat;
   height: 335px;
   width: 1250px;
@@ -35,12 +34,12 @@ const SocialLinks = styled.div`
   justify-content: center;
   align-items: center;
 
-  @media(max-width: ${breakpoints.extra}) {
+  @media (max-width: ${breakpoints.extra}) {
     background-image: none;
     width: 600px;
     height: 100%;
   }
-  @media(max-width: ${breakpoints.mobile}) {
+  @media (max-width: ${breakpoints.mobile}) {
     margin-top: 3rem;
     background-image: none;
     width: 100%;
@@ -51,28 +50,34 @@ const ImageWrapper = styled.div`
   width: 800px;
 `
 
-const Footer = ( {header}) => {
+const Footer = ({ header }) => {
   return (
-       <StyledFooter id="joincommunity">
-         <ImageWrapper>
-            <Img fluid={header}></Img>      
-         </ImageWrapper>
-        <SocialLinks>
-          {socialData.map((one, key) => 
-              <SocialBox 
-              color={one.color} 
-              key={key}
-              icon={one.icon}
-              title={one.title}
-              buttonText={one.buttonText}
-              buttonLink={one.buttonLink}
-            />
-          )}
-        </SocialLinks>  
-        <p>Illustrations by Pwnz. Design by web_worker, Pwnz, NutellaLicka and Daria. Coded by <a href={links.daria}>Daria</a>.</p>
-        <p>Copyright Chips Pangea Poker 2016. <a href="">Privacy Policy</a>. <a href="">Terms of use.</a></p>
-      </StyledFooter> 
-    )
+    <StyledFooter id="joincommunity">
+      <ImageWrapper>
+        <Img fluid={header}></Img>
+      </ImageWrapper>
+      <SocialLinks>
+        {socialData.map((one, key) => (
+          <SocialBox
+            color={one.color}
+            key={key}
+            icon={one.icon}
+            title={one.title}
+            buttonText={one.buttonText}
+            buttonLink={one.buttonLink}
+          />
+        ))}
+      </SocialLinks>
+      <p>
+        Illustrations by Pwnz. Design by web_worker, Pwnz, NutellaLicka and
+        Daria. Coded by <a href={links.daria}>Daria</a>.
+      </p>
+      <p>
+        Copyright Chips Pangea Poker 2016. <a href="">Privacy Policy</a>.{" "}
+        <a href="">Terms of use.</a>
+      </p>
+    </StyledFooter>
+  )
 }
 
-export default Footer;
+export default Footer

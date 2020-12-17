@@ -1,4 +1,4 @@
 export type MenuLink = {
-    link: string,
-    name: string,
+  link: string,
+  name: string,
 }

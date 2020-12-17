@@ -13,7 +13,7 @@ const icons = {
   file,
   twitter,
   btc,
-  down
+  down,
 }
 
 export default icons

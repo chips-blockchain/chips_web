@@ -1,6 +1,5 @@
-import styled from '@emotion/styled'
+import styled from "@emotion/styled"
 import breakpoints from "../../styles/breakpoints"
-
 
 export const StyledSideMenu = styled.nav`
   display: flex;
@@ -14,9 +13,9 @@ export const StyledSideMenu = styled.nav`
   top: 0;
   left: 0;
   transition: transform 0.3s ease-in-out;
-  transform: ${({ open }) => open ? 'translateX(0%)' : 'translateX(-100%)'};
+  transform: ${({ open }) => (open ? "translateX(0%)" : "translateX(-100%)")};
   z-index: 9;
-  
+
   @media (max-width: ${breakpoints.mobile}) {
     width: 100%;
   }
@@ -30,11 +29,10 @@ export const StyledSideMenu = styled.nav`
     color: var(--color-darkPurple);
     text-decoration: none;
     transition: color 0.3s linear;
-    
-    
+
     @media (max-width: ${breakpoints.mobile}) {
       font-size: 1.5rem;
       text-align: center;
     }
   }
-`;
+`

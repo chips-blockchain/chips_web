@@ -2,16 +2,16 @@ import React, { ReactElement } from "react"
 import { StyledBurger } from "../../Atoms/StyledBurger"
 
 type BurgerProps = {
-  open: boolean,
+  open: boolean
   setOpen: Function
 }
 
 const defaultProps = {
   open: false,
-  setOpen: (o) => !o
+  setOpen: o => !o,
 }
 
-const Burger = ({ open, setOpen }: BurgerProps ) : ReactElement => {
+const Burger = ({ open, setOpen }: BurgerProps): ReactElement => {
   return (
     <StyledBurger open={open} onClick={() => setOpen(!open)}>
       <div />
@@ -22,4 +22,4 @@ const Burger = ({ open, setOpen }: BurgerProps ) : ReactElement => {
 }
 
 Burger.defaultProps = defaultProps
-export default Burger;
+export default Burger
