@@ -44,6 +44,11 @@ const HeroTextContainer = styled.div`
     background: rgba(25, 7, 79, 0.7);
     padding: 2rem;
   }
+  @media (max-width: ${breakpoints.mobileSmall}) {
+    & > p {
+      font-size: var(--font-size-h3);
+    }
+  }
 `
 const LogoWrapper = styled.div`
   width: 100%;
@@ -68,8 +73,10 @@ const CTAs = styled.div`
     }
   }
   @media (max-width: ${breakpoints.mobile}) {
-    flex-direction: column;
-    align-items: left;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     & > div {
       margin: 0.5rem;
     }
