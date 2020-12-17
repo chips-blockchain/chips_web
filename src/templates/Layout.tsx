@@ -8,7 +8,7 @@ export default function Layout({ children }) {
   const data = useStaticQuery(
     graphql`
       query {
-        bg: file(relativePath: { eq: "bg/bgx1.png" }) {
+        bg: file(relativePath: { eq: "bg/bgx1_2.png" }) {
           childImageSharp {
             fluid(quality: 90, maxWidth: 1920) {
               ...GatsbyImageSharpFluid_withWebp
