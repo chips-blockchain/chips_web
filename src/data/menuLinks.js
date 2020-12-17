@@ -12,11 +12,11 @@ export const menuLinks = [
     name: "Community",
   },
   {
-    link: "/blog",
+    link: "/comingsoon",
     name: "Articles",
   },
   {
-    link: "#",
+    link: "/comingsoon",
     name: "FAQ",
   },
 ]

@@ -43,8 +43,7 @@ const NotFound = () => (
           WHOOPS. <br /> This is awkward.
         </h1>
         <h3>
-          There is nothing to see here, <br /> just a few messy chips laying
-          around.
+          There is nothing to see here. Please return to your seat.
         </h3>
 
         <h3>
