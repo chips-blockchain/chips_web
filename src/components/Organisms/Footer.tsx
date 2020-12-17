@@ -49,10 +49,6 @@ const SocialLinks = styled.div`
 `
 const ImageWrapper = styled.div`
   width: 800px;
-
-  @media(max-width: ${breakpoints.mobile}) {
-    width: 100%;
-  }
 `
 
 const Footer = ( {header}) => {

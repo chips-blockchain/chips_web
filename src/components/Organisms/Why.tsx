@@ -21,10 +21,6 @@ const WhySection=styled.div`
 const ImageWrapper = styled.div`
   width: 500px;
   margin: auto;
-
-  @media(max-width: ${breakpoints.mobile}) {
-    width: 100%;
-  }
 `
 
 type WhyProps = {

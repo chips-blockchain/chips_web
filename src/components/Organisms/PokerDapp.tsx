@@ -29,13 +29,7 @@ const Container = styled.header`
 const HeaderImageWrapper = styled.div`
     width: 100%;
     max-width: 700px;
-    margin-bottom: 3rem;
-    @media(max-width: ${breakpoints.tablet}) {
-        width: 500px;
-    }    
-    @media(max-width: ${breakpoints.mobile}) {
-        width: 100%;
-    }
+    margin-bottom: 3rem;    
 `
 
 const PokerDapp = ({ header, data } : PokerDappProps ) : ReactElement => {

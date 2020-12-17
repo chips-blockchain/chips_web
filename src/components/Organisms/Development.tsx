@@ -64,9 +64,6 @@ const AlphaNote = styled.div`
 `
 const ImageWrapper = styled.div`
     width: 700px;
-    @media(max-width: ${breakpoints.mobile}) {
-        width: 400px;
-    }
 `
 
 const Development = ({ data, header }: DevelopmentProps) => (
