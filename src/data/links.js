@@ -9,5 +9,9 @@ export default {
     faq: "https://docs.chips.cash",
     discord: "https://discord.gg/YeURqmQx",
     chipsproject: "https://github.com/chips-blockchain/",
-    daria: "https://daria.engineer"
+    daria: "https://daria.engineer",
+    bitcointalk: "https://bitcointalk.org/index.php?topic=2078449.0",
+    twitter: "https://twitter.com/pangea_chips",
+    email: "mailto:pangea.chips@gmail.com"
+
 }

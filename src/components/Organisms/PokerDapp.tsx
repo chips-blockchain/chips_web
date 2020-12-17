@@ -41,7 +41,7 @@ const HeaderImageWrapper = styled.div`
 
 const PokerDapp = ({ header, data } : PokerDappProps ) : ReactElement => {
   return (
-      <Container>
+      <Container id="pokerdapp">
         <HeaderImageWrapper>
             <img src={header}></img>
         </HeaderImageWrapper>

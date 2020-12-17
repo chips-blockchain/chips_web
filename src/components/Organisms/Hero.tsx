@@ -9,6 +9,7 @@ import discord from "../../images/icons/icon_discord.svg"
 import ClickableCta from "../Molecules/ClickableCta"
 import LearnMore from "../Molecules/LearnMore"
 import breakpoints from "../../styles/breakpoints"
+import links from "../../data/links"
 
 type HeroProps = {
     title: string,
@@ -88,15 +89,13 @@ const Hero = ({ title, text, logoImage }: HeroProps) => (
                 <CTAs>
                     <ClickableCta
                         text="Contribute"
-                        link="https://link.com"
+                        link={links.chipsproject}
                         icon={github}
-                        color={'var(--color-neonGreen)'}
                     ></ClickableCta>
                     <ClickableCta
                         text="Join us"
-                        link="https://link.com"
+                        link={links.discord}
                         icon={discord}
-                        color={'var(--color-neonGreen)'}
                     ></ClickableCta>               
                 </CTAs>
             </HeroTextContainer>
