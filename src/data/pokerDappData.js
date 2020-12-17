@@ -1,6 +1,6 @@
 export const pokerDappData = [
     {
-        title: 'FIRST OF ITS KIND',
+        title: 'THE FIRST OF ITS KIND',
         subtitle: 'Pangea Poker is a truly decentralized, peer-to-peer gaming technology',
         text: 'It is the result of complex mathematics & software development with cryptocurrency implementation.  The purpose is to build a new form of online poker experience which  is trustless, secure, and immutable.  CHIPS & Pangea Poker carry Bitcoin’s principles forward into a new dimension of online gaming.',
         image: 'preflop'

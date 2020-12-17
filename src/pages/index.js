@@ -32,7 +32,7 @@ export default function Home({data}) {
           />
           <Hero 
             title={'CHIPS revolutionises online gambling'}
-            text={'The project aims to bring truly decentralized, trust-less, peer-to-peer, and secure, blockchain casino style games.'}
+            text={'The project aims to create truly decentralized, trustless, peer-to-peer, and secure blockchain casino-style games.'}
             logoImage={data.logo.childImageSharp.fluid}
         />
         </BackgroundImage>
