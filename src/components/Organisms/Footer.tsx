@@ -19,6 +19,10 @@ const StyledFooter = styled.footer`
   @media (max-width: ${breakpoints.mobile}) {
     padding-top: 5rem;
   }
+  & > p {
+    text-align: center;
+  }
+  padding-bottom: 2rem;
 `
 
 const SocialLinks = styled.div`
@@ -76,8 +80,8 @@ const Footer = ({ header }) => {
         Daria. Coded by <a href={links.daria}>Daria</a>.
       </p>
       <p>
-        Copyright Chips Pangea Poker 2016. <a href="">Privacy Policy</a>.{" "}
-        <a href="">Terms of use.</a>
+        Copyright Chips Pangea Poker 2016. <br /><a href="/privacy-policy">Privacy Policy</a>.{" "}
+        <a href="/terms-of-use">Terms of use.</a>
       </p>
     </StyledFooter>
   )
