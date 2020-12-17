@@ -9,7 +9,7 @@ type InfoBannerProps = {
 
 const defaultProps = {
     title: "Want to contribute?",
-    text: "We are an open source project and we have very limited development capacity and funds. Whether you would like to contribute your time or funds reach out to us. Please feel free to join our Discord and reach out to NutellaLicka and daria."
+    text: "We are an open source project and we have very limited development capacity and funds. Whether you would like to contribute your time, funds or simply say hello, please join our Discord. Reach out to NutellaLicka or daria with any inquiries."
 }
 const Container = styled.div`
     border: 7px solid var(--color-purple);
