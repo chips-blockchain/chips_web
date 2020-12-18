@@ -27,6 +27,9 @@ const Container = styled.div`
     font-family: var(--font--family-secondary);
     font-size: var(--font-size-h4);
   }
+  @media (max-width: ${breakpoints.tablet}) {
+    width: 600px;
+  }
   @media (max-width: ${breakpoints.mobile}) {
     width: 390px;
   }

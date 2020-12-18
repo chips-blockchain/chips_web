@@ -28,11 +28,12 @@ const defaultProps = {
 const ArticleContainer = styled.div`
   display: flex;
   flex-direction: row;
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 800px;
 
-  margin: 2rem;
-  width: 940px;
-
-  padding: 2rem 1rem 3rem 2rem;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
 
   background-color: var(--color-veryDarkPurple);
   border-radius: 5px;
@@ -62,16 +63,7 @@ const ArticleContainer = styled.div`
   & > .articleCardSmall {
     display: none;
   }
-
-  @media (max-width: ${breakpoints.tablet}) {
-    width: 800px;
-  }
-
-  @media (max-width: ${breakpoints.tablet2}) {
-    width: 650px;
-    padding: 1rem 1rem 1rem 2rem;
-  }
-
+ 
   @media (max-width: ${breakpoints.mobile}) {
     display: none;
   }

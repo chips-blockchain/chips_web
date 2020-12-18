@@ -22,7 +22,7 @@ export default function Home({ data }) {
       <BackgroundImage
         Tag="section"
         fluid={data.headerImage.childImageSharp.fluid}
-        style={{ minHeight: "100vh" }}
+        style={{ minHeight: "100vh", maxWidth: '100vw' }}
       >
         <Header
           logoImage={data.logoText.childImageSharp.fixed}

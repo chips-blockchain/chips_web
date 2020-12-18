@@ -11,11 +11,11 @@ const WhySection = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 10rem;
+  width: 100%;
 
   @media (max-width: ${breakpoints.mobile}) {
     align-items: normal;
     justify-content: space-between;
-    width: 100%;
   }
 `
 const ImageWrapper = styled.div`

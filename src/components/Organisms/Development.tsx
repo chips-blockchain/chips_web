@@ -46,6 +46,9 @@ const Content = styled.div`
   margin-top: 3rem;
   justify-content: space-between;
   width: 700px;
+  @media(max-width: ${breakpoints.tablet2}) {
+   width: 600px;
+  }
   @media (max-width: ${breakpoints.mobile}) {
     flex-direction: column;
     width: 390px;
@@ -56,7 +59,10 @@ const AlphaNote = styled.div`
   text-transform: uppercase;
   color: #c5afff;
   width: 700px;
-  margin: 3rem 0 2rem 0;
+  margin: 3rem 3rem 2rem 3rem;
+  @media (max-width: ${breakpoints.tablet}) {
+    width: 600px;
+  }
   @media (max-width: ${breakpoints.mobile}) {
     width: 390px;
     padding-left: 1rem;
@@ -64,7 +70,13 @@ const AlphaNote = styled.div`
 `
 const ImageWrapper = styled.div`
   width: 700px;
+  @media(max-width: ${breakpoints.tablet2}) {
+    width: 600px;
+  }
   @media(max-width: ${breakpoints.mobile}) {
+    width: 500px;
+  }
+  @media(max-width: ${breakpoints.mobileSmall}) {
     width: 400px;
   }
 `

@@ -48,7 +48,6 @@ const RepoName = styled.a`
   }
   @media (max-width: ${breakpoints.mobile}) {
     & > h2 {
-      // color: var(--color-neonGreen);
       text-decoration: underline;
     }
   }

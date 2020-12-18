@@ -18,13 +18,13 @@ const NavigationContainer = styled.div`
   }
 `
 const NavigationHorizontal = styled.div`
-  @media (max-width: 48em) {
+  @media (max-width: 49em) {
     display: none;
   }
 `
 const NavigationVertical = styled.div`
   display: none;
-  @media (max-width: 48em) {
+  @media (max-width: 49em) {
     display: block;
   }
 `

@@ -65,6 +65,10 @@ const Text = styled.div`
     font-weight: 400;
     font-family: var(--font--family-secondary);
   }
+  
+  @media (max-width: ${breakpoints.extra}) {
+    width: 300px;
+  }
 
   @media (max-width: ${breakpoints.tablet}) {
     width: 500px;

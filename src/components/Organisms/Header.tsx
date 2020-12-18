@@ -4,6 +4,7 @@ import Navigation from "../Molecules/Navigation"
 import styled from "@emotion/styled"
 import Img, { FixedObject } from "gatsby-image"
 import { MenuLink } from "../Molecules/Navigation/types"
+import breakpoints from "../../styles/breakpoints"
 
 type HeaderProps = {
   logoImage: FixedObject
@@ -21,11 +22,11 @@ const StyledHeader = styled.header`
   justify-content: space-between;
   padding: 1rem 7rem 0 5rem;
 
-  @media (max-width: 62em) {
+  @media (max-width: ${breakpoints.tablet}) {
     padding: 1rem;
   }
 
-  @media (max-width: 43em) {
+  @media (max-width: ${breakpoints.tablet}) {
     & > img {
       width: 100px;
     }
@@ -34,7 +35,7 @@ const StyledHeader = styled.header`
 
 const Logo = styled.img`
   width: 200px;
-  @media (max-width: 43em) {
+  @media (max-width: ${breakpoints.tablet}) {
     width: 100px;
   }
 `

@@ -21,8 +21,9 @@ const StyledFooter = styled.footer`
   }
   & > p {
     text-align: center;
+    margin: 1rem 2rem 0 2rem;
   }
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 `
 
 const SocialLinks = styled.div`
@@ -52,6 +53,9 @@ const SocialLinks = styled.div`
 `
 const ImageWrapper = styled.div`
   width: 800px;
+  @media(max-width: ${breakpoints.tablet}) {
+    width: 600px;
+  }  
   @media(max-width: ${breakpoints.mobile}) {
     width: 100%;
   }

@@ -58,7 +58,7 @@ const BenefitsSection = styled.div`
     }
     @media (max-width: 52rem) {
       width: 280px;
-      height: 510px;
+      height: 545px;
     }
     @media (max-width: ${breakpoints.mobile}) {
       width: 100%;
