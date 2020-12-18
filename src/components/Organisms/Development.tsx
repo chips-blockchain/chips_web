@@ -23,6 +23,10 @@ const Container = styled.div`
   padding: 7rem 10rem;
   background-size: cover;
   background-repear: no-repeat;
+  @media (max-width: ${breakpoints.mobile}) {
+    margin-top: 0rem;
+    padding-top: 2rem;
+  }
 `
 const Repositories = styled.div`
   display: flex;
