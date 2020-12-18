@@ -30,13 +30,8 @@ const Repositories = styled.div`
   & > h1 {
     color: var(--color-neonBlue);
   }
-  margin-right: 1.5rem;
+  margin-right: 0.2rem;
   margin-left: 1.5rem;
-  @media (max-width: ${breakpoints.mobile}) {
-    &:nth-of-type(2) {
-      margin-left: 5.5rem;
-    }
-  }
 `
 const Content = styled.div`
   display: flex;
@@ -58,10 +53,10 @@ const Content = styled.div`
 const AlphaNote = styled.div`
   text-transform: uppercase;
   color: #c5afff;
-  width: 700px;
+  width: 650px;
   margin: 3rem 3rem 2rem 3rem;
   @media (max-width: ${breakpoints.tablet}) {
-    width: 600px;
+    width: 550px;
   }
   @media (max-width: ${breakpoints.mobile}) {
     width: 390px;
@@ -94,15 +89,15 @@ const Development = ({ data, header }: DevelopmentProps) => (
               key={key}
               title={repo.title}
               description={repo.description}
-              link={repo.github ? repo.github : repo.link}
-              icon={!!repo.github}
+              link={repo.link}
+              icon={repo.icon}
             />
           ))}
         </Repositories>
       ))}
     </Content>
     <AlphaNote>
-      The official alpha version has not been released yet. For more information
+      The official alpha version has not been released yet. For information
       on the project updates please follow our announcements in Discord and
       Twitter.
     </AlphaNote>

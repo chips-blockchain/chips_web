@@ -5,32 +5,38 @@ export const devLinks = [
     {
       title: "Manual installation",
       description: "for tech savvy",
-      github: links.manual,
+      link: links.manual,
+      icon: 'github'
     },
     {
       title: "Pre Alpha Tutorial",
       description: "for extra curious",
-      github: links.prealphatutorial,
+      link: links.prealphatutorial,
+      icon: 'github'
     },
     {
       title: "CHIPS",
-      description: "cryptocurrency for casino style games",
-      github: links.chips,
+      description: "currency for casino style games",
+      link: links.chips,
+      icon: 'github'
     },
     {
       title: "Bet",
       description: "implementation of Pangea in C",
-      github: links.bet,
+      link: links.bet,
+      icon: 'github'
     },
     {
       title: "Poker GUI",
       description: "React based GUI",
-      github: links.gui,
+      link: links.gui,
+      icon: 'github'
     },
     {
       title: "Docker",
       description: "Dockerized backend for Bet",
-      github: links.docker,
+      link: links.docker,
+      icon: 'github'
     },
   ],
   [
@@ -38,16 +44,19 @@ export const devLinks = [
       title: "Pangea White Paper",
       description: "Co-written by jl777 and sg777",
       link: links.pangea,
+      icon: 'file'
     },
     {
       title: "CHIPS FAQ",
       description: "All you want to know",
       link: links.faq,
+      icon: 'link'
     },
     {
       title: "Discord",
       description: "Join join join us!",
       link: links.discord,
+      icon: 'discord'
     },
   ],
 ]

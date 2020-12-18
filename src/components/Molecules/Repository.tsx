@@ -65,7 +65,7 @@ const Repository = ({
   icon,
 }: RepositoryProps): ReactElement => (
   <Container>
-    {icon && <ClickableIcon icon={icons.github} link={link}></ClickableIcon>}
+    <ClickableIcon icon={icons[icon]} link={link}></ClickableIcon>
     <RepoName href={link}>
       <h2>{title}</h2>
       <ExtraInfo>{description}</ExtraInfo>
