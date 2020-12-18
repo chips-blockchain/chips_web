@@ -1,9 +1,10 @@
-import React, { ReactElement, useState } from "react"
+import React, { ReactElement, useState, useRef } from "react"
 import NavigationLink from "../../Atoms/NavigationLink"
 import styled from "@emotion/styled"
 import Burger from "./Burger"
 import NavigationSide from "./NavigationSide"
 import { MenuLink } from "./types"
+import { useOnClickOutside } from '../../../hooks';
 
 const NavigationContainer = styled.div`
   padding-top: 1.5rem;
@@ -38,7 +39,10 @@ const defaultProps = {
 }
 
 const Navigation = ({ menuLinks }: NavigationProps): ReactElement => {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
+  const node = useRef();
+  // closes navigation on click outside
+  useOnClickOutside(node, () => setOpen(false));
   return (
     <NavigationContainer>
       <NavigationHorizontal>
@@ -52,7 +56,7 @@ const Navigation = ({ menuLinks }: NavigationProps): ReactElement => {
           </NavigationLink>
         ))}
       </NavigationHorizontal>
-      <NavigationVertical>
+      <NavigationVertical ref={node}>
         <Burger open={open} setOpen={setOpen} />
         <NavigationSide menuLinks={menuLinks} open={open} setOpen={setOpen} />
       </NavigationVertical>
