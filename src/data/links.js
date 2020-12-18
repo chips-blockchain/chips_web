@@ -16,7 +16,7 @@ export default {
   twitter: "https://twitter.com/pangea_chips",
   email: "mailto:pangea.chips@gmail.com",
   apow: "https://komodoplatform.com/adaptive-proof-of-work/",
-  dpow: "https://medium.com/@jameslee777/dpow-demystified-7ce2701fd74",
+  dpow: "https://komodoplatform.com/delayed-proof-of-work/",
   chipsAndLn:
     "https://medium.com/@jameslee777/chips-lightningnetwork-pangea-cc-blockchain-enforced-realtime-poker-and-other-games-1b67fa1d96ed",
   decentralizedCashier:
