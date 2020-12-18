@@ -4,7 +4,10 @@ html, body {
     font-family: var(--font--family-primary);
     background-color: var(--color-darkPurple);
     scroll-behavior: smooth;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
 }
+
 
 p, h1, h2, h3 {
     color: var(--color-almostWhite);

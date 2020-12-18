@@ -21,6 +21,9 @@ const Description = styled.p`
   font-size: var(--font-size-h2);
   text-align: center;
   line-heigth: var(--line-height-1);
+  @media (max-width: ${breakpoints.mobile}) {
+    margin: 2rem 2rem;
+  }
 `
 
 const BenefitsSection = styled.div`
