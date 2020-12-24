@@ -122,7 +122,7 @@ const ArticleCard = ({
         )}
       </ArticleContainer>
       <Wrapper>
-        <ArticleCardInline title={title} />
+        <ArticleCardInline title={title} link={link} />
       </Wrapper>
     </div>
   )

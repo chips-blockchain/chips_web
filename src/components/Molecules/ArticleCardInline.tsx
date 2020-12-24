@@ -3,11 +3,13 @@ import styled from "@emotion/styled"
 import SmallButton from "../Atoms/SmallButton"
 
 type ArticleCardProps = {
-  title: string
+  title: string,
+  link: string
 }
 
 const defaultProps = {
   title: "Lorem Ipsum",
+  link: "https://link.com"
 }
 
 const CardContent = styled.div`
@@ -26,10 +28,10 @@ const CardContent = styled.div`
   margin-top: 1rem;
 `
 
-const ArticleCardInline = ({ title }: ArticleCardProps): ReactElement => (
+const ArticleCardInline = ({ title, link }: ArticleCardProps): ReactElement => (
   <CardContent>
     <h2>{title}</h2>
-    <SmallButton link={"https://link.com"}></SmallButton>
+    <SmallButton link={link}></SmallButton>
   </CardContent>
 )
 
