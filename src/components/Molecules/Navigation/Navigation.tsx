@@ -7,7 +7,7 @@ import { MenuLink } from "./types"
 import { useOnClickOutside } from '../../../hooks';
 
 const NavigationContainer = styled.div`
-  padding-top: 1.5rem;
+  padding-top: 2rem;
   a {
     opacity: 0.7;
     color: var(--color-almostWhite);

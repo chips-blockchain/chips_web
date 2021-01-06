@@ -7,7 +7,8 @@ const NavigationLink = styled(Link)`
   justify-content: center;
   padding: 0.5rem 1rem 0.5rem;
   text-decoration: none;
-  font-size: var(--font-size-h3);
+  font-size: var(--font-size-h5);
+  text-transform: uppercase;
 `
 
 export default NavigationLink
