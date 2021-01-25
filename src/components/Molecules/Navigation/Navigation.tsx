@@ -14,7 +14,7 @@ const NavigationContainer = styled.div`
   }
 
   a:hover {
-    color: var(--color-neonBlue);
+    color: var(--color-neonGreen);
     opacity: 1;
   }
 `
