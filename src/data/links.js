@@ -21,4 +21,5 @@ export default {
     "https://medium.com/@jameslee777/chips-lightningnetwork-pangea-cc-blockchain-enforced-realtime-poker-and-other-games-1b67fa1d96ed",
   decentralizedCashier:
     "https://medium.com/@jameslee777/multichain-decentralized-cashier-for-gaming-110297ced95f",
+    chipsBlog: "https://cms.chips.cash/"
 }

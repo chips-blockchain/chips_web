@@ -2,8 +2,8 @@ import styled from "@emotion/styled"
 
 const Title = styled.h1`
   text-transform: uppercase;
-  color: var(--color-neonBlue);
-  font-size: var(--font-size-h1);
+  color: var(--color-almostWhite);
+  font-size: 2.5rem;
   margin: 0 0 1rem 0;
 `
 

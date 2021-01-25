@@ -39,7 +39,7 @@ const HeroContainer = styled.div`
 const HeroTextContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding-top: 5rem;
+  padding-top: 7rem;
   @media (max-width: ${breakpoints.mobile}) {
     background: rgba(25, 7, 79, 0.7);
     padding: 2rem;

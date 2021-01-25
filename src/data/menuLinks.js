@@ -1,3 +1,5 @@
+import links from "./links";
+
 export const menuLinks = [
   {
     link: "#whatischips",
@@ -12,8 +14,8 @@ export const menuLinks = [
     name: "Community",
   },
   {
-    link: "/comingsoon",
-    name: "Articles",
+    link: links.chipsBlog,
+    name: "News",
   },
   {
     link: "/comingsoon",

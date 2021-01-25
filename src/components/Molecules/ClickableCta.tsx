@@ -16,6 +16,7 @@ const defaultProps = {
 }
 
 const Container = styled.div`
+  margin-top: 1rem;
   & > a > div {
     width: 160px;
     padding: 0.5rem 1rem;
