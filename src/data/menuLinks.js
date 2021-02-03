@@ -15,7 +15,7 @@ export const menuLinks = [
   },
   {
     link: links.chipsBlog,
-    name: "News",
+    name: "blog",
   },
   {
     link: "/comingsoon",
