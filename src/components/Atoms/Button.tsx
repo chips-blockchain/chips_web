@@ -1,7 +1,4 @@
 import React, { ReactElement } from "react"
-import { FixedObject } from "gatsby-image"
-import Img from "gatsby-image"
-import { sampleBase64 } from "../../utils/sampleBase64"
 import styled from "@emotion/styled"
 
 type ButtonProps = {

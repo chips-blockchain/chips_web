@@ -7,7 +7,7 @@ export default {
   gui: "https://github.com/chips-blockchain/pangea-poker",
   docker: "https://github.com/chips-blockchain/docker",
   pangea:
-    "https://medium.com/@jameslee777/chips-decentralized-poker-protocol-65cedeafde38",
+    "https://raw.githubusercontent.com/chips-blockchain/bet/master/docs/Unsolicited_PANGEA_WP.pdf",
   faq: "https://docs.chips.cash",
   discord: "https://discord.gg/YeURqmQx",
   chipsproject: "https://github.com/chips-blockchain/",
