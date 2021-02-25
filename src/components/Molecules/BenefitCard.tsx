@@ -20,6 +20,7 @@ const BenefitCardContainer = styled.div`
   padding: 2rem;
   display: flex;
   flex-direction: column;
+  height: 560px;
 
   h2 {
     height: 40px;
