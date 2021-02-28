@@ -9,7 +9,7 @@ export default {
   pangea:
     "https://raw.githubusercontent.com/chips-blockchain/bet/master/docs/Unsolicited_PANGEA_WP.pdf",
   faq: "https://docs.chips.cash",
-  discord: "https://discord.gg/YeURqmQx",
+  discord: "https://discord.gg/9XMYRXUUSP",
   chipsproject: "https://github.com/chips-blockchain/",
   daria: "https://daria.engineer",
   bitcointalk: "https://bitcointalk.org/index.php?topic=2078449.0",
