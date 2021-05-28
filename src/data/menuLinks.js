@@ -18,6 +18,10 @@ export const menuLinks = [
     name: "blog",
   },
   {
+    link: links.explorer,
+    name: "Explorer",
+  },
+  {
     link: "/comingsoon",
     name: "FAQ",
   },

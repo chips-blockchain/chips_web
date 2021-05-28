@@ -1,6 +1,7 @@
 import React, { ReactElement } from "react"
-import styled from "@emotion/styled"
+
 import OutlineButton from "../Atoms/OutlineButton"
+import styled from "@emotion/styled"
 
 type ClickableCtaProps = {
   text: string
@@ -21,16 +22,16 @@ const Container = styled.div`
     width: 160px;
     padding: 0.5rem 1rem;
     margin-right: 1.5rem;
-    border: solid 3px var(--color-neonGreen);
+    border: solid 1px var(--color-almostWhite);
     font-weight: bold;
+    transition: transform .3s;
 
     &:hover {
-      background-color: var(--color-darkPurple);
-      text-decoration: underline;
+      transform: scale(1.05);
     }
   }
 
-  & > a > div > img {
+  & > a > div > img { 
     margin-left: 1rem;
   }
 `

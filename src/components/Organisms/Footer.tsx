@@ -1,11 +1,11 @@
-import React from "react"
-import styled from "@emotion/styled"
-import SocialBox from "../Molecules/SocialBox"
-import socialneon from "../../images/bg/bg_social_neon.svg"
-import breakpoints from "../../styles/breakpoints"
-import socialData from "../../data/socialData"
-import links from "../../data/links"
 import Img from "gatsby-image"
+import React from "react"
+import SocialBox from "../Molecules/SocialBox"
+import breakpoints from "../../styles/breakpoints"
+import links from "../../data/links"
+import socialData from "../../data/socialData"
+import socialneon from "../../images/bg/bg_social_neon.svg"
+import styled from "@emotion/styled"
 
 const StyledFooter = styled.footer`
   background-size: cover;
@@ -84,7 +84,7 @@ const Footer = ({ header }) => {
         Daria. Coded by <a href={links.daria}>Daria</a>.
       </p>
       <p>
-        Copyright Chips Pangea Poker 2016. <br /><a href="/privacy-policy">Privacy Policy</a>.{" "}
+        Copyright Chips Pangea Poker 2021. <br /><a href="/privacy-policy">Privacy Policy</a>.{" "}
         <a href="/terms-of-use">Terms of use.</a>
       </p>
     </StyledFooter>
